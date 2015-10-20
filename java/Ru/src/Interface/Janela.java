@@ -22,7 +22,6 @@ public class Janela extends javax.swing.JFrame {
     public Janela() {
         initComponents();
         
-        //JPanel panel1 = new Panel1();
         //panel1.setVisible(true);
         
     }
@@ -36,41 +35,71 @@ public class Janela extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLayeredPane1 = new javax.swing.JLayeredPane();
-        panel11 = new Interface.Panel1();
+        panel12 = new Interface.Panel1();
+        panel22 = new Interface.Panel2();
+        panel31 = new Interface.Panel3();
+        panel41 = new Interface.Panel4();
+        panel51 = new Interface.Panel5();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Restaurante Universitario");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setMinimumSize(new java.awt.Dimension(700, 500));
         setPreferredSize(new java.awt.Dimension(800, 600));
+        getContentPane().setLayout(new java.awt.CardLayout());
+        getContentPane().add(panel12, "card2");
 
-        javax.swing.GroupLayout jLayeredPane1Layout = new javax.swing.GroupLayout(jLayeredPane1);
-        jLayeredPane1.setLayout(jLayeredPane1Layout);
-        jLayeredPane1Layout.setHorizontalGroup(
-            jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panel11, javax.swing.GroupLayout.DEFAULT_SIZE, 790, Short.MAX_VALUE)
+        javax.swing.GroupLayout panel22Layout = new javax.swing.GroupLayout(panel22);
+        panel22.setLayout(panel22Layout);
+        panel22Layout.setHorizontalGroup(
+            panel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 800, Short.MAX_VALUE)
         );
-        jLayeredPane1Layout.setVerticalGroup(
-            jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jLayeredPane1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(panel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        panel22Layout.setVerticalGroup(
+            panel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 600, Short.MAX_VALUE)
         );
-        jLayeredPane1.setLayer(panel11, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jLayeredPane1)
-                .addContainerGap())
+        getContentPane().add(panel22, "card3");
+
+        javax.swing.GroupLayout panel31Layout = new javax.swing.GroupLayout(panel31);
+        panel31.setLayout(panel31Layout);
+        panel31Layout.setHorizontalGroup(
+            panel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 800, Short.MAX_VALUE)
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLayeredPane1)
+        panel31Layout.setVerticalGroup(
+            panel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 600, Short.MAX_VALUE)
         );
+
+        getContentPane().add(panel31, "card4");
+
+        javax.swing.GroupLayout panel41Layout = new javax.swing.GroupLayout(panel41);
+        panel41.setLayout(panel41Layout);
+        panel41Layout.setHorizontalGroup(
+            panel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 800, Short.MAX_VALUE)
+        );
+        panel41Layout.setVerticalGroup(
+            panel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 600, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(panel41, "card5");
+
+        javax.swing.GroupLayout panel51Layout = new javax.swing.GroupLayout(panel51);
+        panel51.setLayout(panel51Layout);
+        panel51Layout.setHorizontalGroup(
+            panel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 800, Short.MAX_VALUE)
+        );
+        panel51Layout.setVerticalGroup(
+            panel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 600, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(panel51, "card6");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -111,8 +140,11 @@ public class Janela extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLayeredPane jLayeredPane1;
-    private Interface.Panel1 panel11;
+    private Interface.Panel1 panel12;
+    private Interface.Panel2 panel22;
+    private Interface.Panel3 panel31;
+    private Interface.Panel4 panel41;
+    private Interface.Panel5 panel51;
     // End of variables declaration//GEN-END:variables
 
 }
