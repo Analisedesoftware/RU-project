@@ -16,7 +16,6 @@ import BandodeDados.*;
 
 public class Pessoa {
     private String nome;
-    private int codigo;
     private String senha;
 
     /**
@@ -34,21 +33,6 @@ public class Pessoa {
     }
 
     /**
-     * @return the codigo
-     */
-    public int getCodigo() {
-        return codigo;
-    }
-
-    /**
-     * @param codigo the codigo to set
-     */
-    public void setCodigo(int codigo) {
-        this.codigo = codigo;
-    }
-
-
-    /**
      * @return the senha
      */
     public String getSenha() {
@@ -61,4 +45,5 @@ public class Pessoa {
     public void setSenha(String senha) {
         this.senha = senha;
     }
+
 }

@@ -16,7 +16,9 @@ import BandodeDados.*;
 
 public class Cliente extends Pessoa {
     private String email;
-    private Double credito;
+    private Double saldo;
+    private int ra;
+    private boolean bolsista;
 
     /**
      * @return the email
@@ -33,17 +35,45 @@ public class Cliente extends Pessoa {
     }
 
     /**
-     * @return the credito
+     * @return the saldo
      */
-    public Double getCredito() {
-        return credito;
+    public Double getSaldo() {
+        return saldo;
     }
 
     /**
-     * @param credito the credito to set
+     * @param saldo the saldo to set
      */
-    public void setCredito(Double credito) {
-        this.credito = credito;
+    public void setSaldo(Double saldo) {
+        this.saldo = saldo;
+    }
+
+    /**
+     * @return the ra
+     */
+    public int getRa() {
+        return ra;
+    }
+
+    /**
+     * @param ra the ra to set
+     */
+    public void setRa(int ra) {
+        this.ra = ra;
+    }
+
+    /**
+     * @return the bolsista
+     */
+    public boolean isBolsista() {
+        return bolsista;
+    }
+
+    /**
+     * @param bolsista the bolsista to set
+     */
+    public void setBolsista(boolean bolsista) {
+        this.bolsista = bolsista;
     }
 
 

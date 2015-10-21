@@ -8,6 +8,7 @@ package Interface;
 
 import BandodeDados.*;
 import ru.*;
+import Main.*;
 
 import javax.swing.JPanel;
 
@@ -22,7 +23,12 @@ public class Janela extends javax.swing.JFrame {
     public Janela() {
         initComponents();
         
-        //panel1.setVisible(true);
+        panel1.setVisible(true);
+        panel2.setVisible(false);
+        panel3.setVisible(false);
+        panel4.setVisible(false);
+        panel5.setVisible(false);
+        
         
     }
 
@@ -35,11 +41,11 @@ public class Janela extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        panel12 = new Interface.Panel1();
-        panel22 = new Interface.Panel2();
-        panel31 = new Interface.Panel3();
-        panel41 = new Interface.Panel4();
-        panel51 = new Interface.Panel5();
+        panel1 = new Interface.Panel1();
+        panel2 = new Interface.Panel2();
+        panel3 = new Interface.Panel3();
+        panel4 = new Interface.Panel4();
+        panel5 = new Interface.Panel5();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Restaurante Universitario");
@@ -47,59 +53,11 @@ public class Janela extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(700, 500));
         setPreferredSize(new java.awt.Dimension(800, 600));
         getContentPane().setLayout(new java.awt.CardLayout());
-        getContentPane().add(panel12, "card2");
-
-        javax.swing.GroupLayout panel22Layout = new javax.swing.GroupLayout(panel22);
-        panel22.setLayout(panel22Layout);
-        panel22Layout.setHorizontalGroup(
-            panel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 800, Short.MAX_VALUE)
-        );
-        panel22Layout.setVerticalGroup(
-            panel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 600, Short.MAX_VALUE)
-        );
-
-        getContentPane().add(panel22, "card3");
-
-        javax.swing.GroupLayout panel31Layout = new javax.swing.GroupLayout(panel31);
-        panel31.setLayout(panel31Layout);
-        panel31Layout.setHorizontalGroup(
-            panel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 800, Short.MAX_VALUE)
-        );
-        panel31Layout.setVerticalGroup(
-            panel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 600, Short.MAX_VALUE)
-        );
-
-        getContentPane().add(panel31, "card4");
-
-        javax.swing.GroupLayout panel41Layout = new javax.swing.GroupLayout(panel41);
-        panel41.setLayout(panel41Layout);
-        panel41Layout.setHorizontalGroup(
-            panel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 800, Short.MAX_VALUE)
-        );
-        panel41Layout.setVerticalGroup(
-            panel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 600, Short.MAX_VALUE)
-        );
-
-        getContentPane().add(panel41, "card5");
-
-        javax.swing.GroupLayout panel51Layout = new javax.swing.GroupLayout(panel51);
-        panel51.setLayout(panel51Layout);
-        panel51Layout.setHorizontalGroup(
-            panel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 800, Short.MAX_VALUE)
-        );
-        panel51Layout.setVerticalGroup(
-            panel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 600, Short.MAX_VALUE)
-        );
-
-        getContentPane().add(panel51, "card6");
+        getContentPane().add(panel1, "card2");
+        getContentPane().add(panel2, "card3");
+        getContentPane().add(panel3, "card4");
+        getContentPane().add(panel4, "card5");
+        getContentPane().add(panel5, "card6");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -138,13 +96,20 @@ public class Janela extends javax.swing.JFrame {
             }
         });
     }
+    
+    public void setPanel1Visibility(Boolean visibility) {
+        panel1.setVisible(visibility); 
+    }
+    public void setPanel2Visibility(Boolean visibility) {
+        panel2.setVisible(visibility); 
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private Interface.Panel1 panel12;
-    private Interface.Panel2 panel22;
-    private Interface.Panel3 panel31;
-    private Interface.Panel4 panel41;
-    private Interface.Panel5 panel51;
+    private Interface.Panel1 panel1;
+    private Interface.Panel2 panel2;
+    private Interface.Panel3 panel3;
+    private Interface.Panel4 panel4;
+    private Interface.Panel5 panel5;
     // End of variables declaration//GEN-END:variables
 
 }

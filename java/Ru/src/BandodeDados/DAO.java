@@ -38,11 +38,11 @@ public class DAO  {
             ResultSet rs = this.stmt1.executeQuery("select * from alunos where ra =" + "\"" + ra + "\"");
             if (rs.next()) {
                 Cliente res = new Cliente();
-                res.setCodigo(rs.getInt("ra"));
+                //res.setCodigo(rs.getInt("ra"));
                 res.setNome(rs.getString("nome"));
                 res.setEmail(rs.getString("email"));
                 res.setSenha(rs.getString("senha"));
-                res.setCredito(rs.getDouble("credito"));
+                res.setSaldo(rs.getDouble("saldo"));
                 
                 return res;
             } else {
