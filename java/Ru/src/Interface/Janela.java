@@ -10,6 +10,7 @@ import BandodeDados.*;
 import ru.*;
 import Main.*;
 
+import java.awt.CardLayout;
 import javax.swing.JPanel;
 
 /**
@@ -19,17 +20,40 @@ import javax.swing.JPanel;
 
 public class Janela extends javax.swing.JFrame {
 
+    CardLayout card;
     /** Creates new form Janela */
     public Janela() {
         initComponents();
+        card = (CardLayout)(panelMaster.getLayout());
+        // criar paineis
+//        Interface.Panel1 panel1 = new Interface.Panel1();
+//        Interface.Panel2 panel2 = new Interface.Panel2();
+//        Interface.Panel3 panel3 = new Interface.Panel3();
+//        Interface.Panel4 panel4 = new Interface.Panel4();
+//        Interface.Panel5 panel5 = new Interface.Panel5();
         
-        panel1.setVisible(true);
-        panel2.setVisible(false);
-        panel3.setVisible(false);
-        panel4.setVisible(false);
-        panel5.setVisible(false);
+//        getContentPane().getLayout().addLayoutComponent("panel1", panel1);
+//        getContentPane().getLayout().addLayoutComponent("panel2", panel2);
+//        getContentPane().getLayout().addLayoutComponent("panel3", panel3);
+//        getContentPane().getLayout().addLayoutComponent("panel4", panel4);
+//        getContentPane().getLayout().addLayoutComponent("panel5", panel5);
+//        getContentPane().getLayout().addLayoutComponent("panel5", panel5);
+//        pack();
+//        setVisible(true);
+//        getContentPane().getLayout().show(getContentPane(), "panel1");
         
-        
+        //criar layout
+//        JPanel cards = new JPanel(new CardLayout());
+//        cards.setVisible(true);
+//        cards.getLayout().addLayoutComponent("panel'", panel1);
+////        cards.add(panel2, "panel2");
+////        cards.add(panel3, "panel3");
+////        cards.add(panel4, "panel4");
+////        cards.add(panel5, "panel5");
+//        
+//        //cards.getLayout().show(panel1);
+//        cards.pack();
+//        cards.setVisible(true);
     }
 
     /** This method is called from within the constructor to
@@ -41,23 +65,36 @@ public class Janela extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        panel1 = new Interface.Panel1();
-        panel2 = new Interface.Panel2();
-        panel3 = new Interface.Panel3();
-        panel4 = new Interface.Panel4();
-        panel5 = new Interface.Panel5();
+        panelMaster = new javax.swing.JPanel();
+        panel11 = new Interface.Panel1();
+        panel21 = new Interface.Panel2();
+        panel31 = new Interface.Panel3();
+        panel41 = new Interface.Panel4();
+        panel51 = new Interface.Panel5();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Restaurante Universitario");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setMinimumSize(new java.awt.Dimension(700, 500));
         setPreferredSize(new java.awt.Dimension(800, 600));
-        getContentPane().setLayout(new java.awt.CardLayout());
-        getContentPane().add(panel1, "card2");
-        getContentPane().add(panel2, "card3");
-        getContentPane().add(panel3, "card4");
-        getContentPane().add(panel4, "card5");
-        getContentPane().add(panel5, "card6");
+
+        panelMaster.setLayout(new java.awt.CardLayout());
+        panelMaster.add(panel11, "card2");
+        panelMaster.add(panel21, "card3");
+        panelMaster.add(panel31, "card4");
+        panelMaster.add(panel41, "card5");
+        panelMaster.add(panel51, "card6");
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(panelMaster, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(panelMaster, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -97,19 +134,24 @@ public class Janela extends javax.swing.JFrame {
         });
     }
     
-    public void setPanel1Visibility(Boolean visibility) {
-        panel1.setVisible(visibility); 
-    }
-    public void setPanel2Visibility(Boolean visibility) {
-        panel2.setVisible(visibility); 
+//    public void setPanel1Visibility(Boolean visibility) {
+//        panel1.setVisible(visibility); 
+//    }
+//    public void setPanel2Visibility(Boolean visibility) {
+//        panel2.setVisible(visibility); 
+//    }
+    
+    public void mostrarCarta(String carta) {
+        card.show(panelMaster, carta);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private Interface.Panel1 panel1;
-    private Interface.Panel2 panel2;
-    private Interface.Panel3 panel3;
-    private Interface.Panel4 panel4;
-    private Interface.Panel5 panel5;
+    private Interface.Panel1 panel11;
+    private Interface.Panel2 panel21;
+    private Interface.Panel3 panel31;
+    private Interface.Panel4 panel41;
+    private Interface.Panel5 panel51;
+    private javax.swing.JPanel panelMaster;
     // End of variables declaration//GEN-END:variables
 
 }
