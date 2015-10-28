@@ -48,6 +48,11 @@ public class Panel1 extends javax.swing.JPanel {
         });
 
         jButton2.setText("Cliente");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -73,14 +78,28 @@ public class Panel1 extends javax.swing.JPanel {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        String qualCarta = "card3";
         //Janela.panel2.setVisible(true);
         
         //controle.janela.setPanel1Visibility(false);
         //controle.janela.setPanel2Visibility(true);
         //controle.janela.card.show(controle.janela.panelMaster, "card3");
-        controle.janela.mostrarCarta("card3");
+    try {
+            //controle.janela.mostrarCarta("card3");
+            controle.janela.mostrarCarta(qualCarta);
+        } catch (Exception e) {
+            System.out.println("erro aqui?  " + e.toString());
+        }
+        
         
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        
+        //controle.janela.testeTexto("oioi ");
+        controle.testando("oioioi ");
+    }//GEN-LAST:event_jButton2ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

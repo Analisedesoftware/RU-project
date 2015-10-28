@@ -20,11 +20,12 @@ import javax.swing.JPanel;
 
 public class Janela extends javax.swing.JFrame {
 
-    CardLayout card;
+    public CardLayout card;
     /** Creates new form Janela */
     public Janela() {
         initComponents();
         card = (CardLayout)(panelMaster.getLayout());
+        card.show(panelMaster, "card2");
         // criar paineis
 //        Interface.Panel1 panel1 = new Interface.Panel1();
 //        Interface.Panel2 panel2 = new Interface.Panel2();
@@ -71,12 +72,14 @@ public class Janela extends javax.swing.JFrame {
         panel31 = new Interface.Panel3();
         panel41 = new Interface.Panel4();
         panel51 = new Interface.Panel5();
+        panel61 = new Interface.Panel6();
+        panel71 = new Interface.Panel7();
+        panel81 = new Interface.Panel8();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Restaurante Universitario");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setMinimumSize(new java.awt.Dimension(700, 500));
-        setPreferredSize(new java.awt.Dimension(800, 600));
 
         panelMaster.setLayout(new java.awt.CardLayout());
         panelMaster.add(panel11, "card2");
@@ -84,6 +87,9 @@ public class Janela extends javax.swing.JFrame {
         panelMaster.add(panel31, "card4");
         panelMaster.add(panel41, "card5");
         panelMaster.add(panel51, "card6");
+        panelMaster.add(panel61, "card7");
+        panelMaster.add(panel71, "card8");
+        panelMaster.add(panel81, "card9");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -102,37 +108,37 @@ public class Janela extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Janela.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Janela.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Janela.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Janela.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Janela().setVisible(true);
-            }
-        });
-    }
+//    public static void main(String args[]) {
+//        /* Set the Nimbus look and feel */
+//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+//         */
+//        try {
+//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+//                if ("Nimbus".equals(info.getName())) {
+//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+//                    break;
+//                }
+//            }
+//        } catch (ClassNotFoundException ex) {
+//            java.util.logging.Logger.getLogger(Janela.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (InstantiationException ex) {
+//            java.util.logging.Logger.getLogger(Janela.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (IllegalAccessException ex) {
+//            java.util.logging.Logger.getLogger(Janela.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+//            java.util.logging.Logger.getLogger(Janela.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        }
+//        //</editor-fold>
+//
+//        /* Create and display the form */
+//        java.awt.EventQueue.invokeLater(new Runnable() {
+//            public void run() {
+//                new Janela().setVisible(true);
+//            }
+//        });
+//    }
     
 //    public void setPanel1Visibility(Boolean visibility) {
 //        panel1.setVisible(visibility); 
@@ -142,7 +148,15 @@ public class Janela extends javax.swing.JFrame {
 //    }
     
     public void mostrarCarta(String carta) {
-        card.show(panelMaster, carta);
+        try {
+            card.show(panelMaster, carta);
+        } catch (Exception e) {
+            System.out.println("erro muda carta" + e.toString());
+        }
+
+    }
+    public void testeTexto(String text){
+        System.out.println(text);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -151,6 +165,9 @@ public class Janela extends javax.swing.JFrame {
     private Interface.Panel3 panel31;
     private Interface.Panel4 panel41;
     private Interface.Panel5 panel51;
+    private Interface.Panel6 panel61;
+    private Interface.Panel7 panel71;
+    private Interface.Panel8 panel81;
     private javax.swing.JPanel panelMaster;
     // End of variables declaration//GEN-END:variables
 

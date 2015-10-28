@@ -21,5 +21,9 @@ public class Controle {
         
     }
     
+    public void testando(String teste){
+        System.out.println(teste);
+    }
+    
 
 }

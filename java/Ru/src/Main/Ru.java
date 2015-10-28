@@ -15,7 +15,7 @@ public class Ru {
     /**
      * @param args the command line arguments
      */
-   static Controle controle; 
+   public static Controle controle; 
     
     public static void main(String[] args) {
         // TODO code application logic here
