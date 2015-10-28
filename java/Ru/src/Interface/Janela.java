@@ -8,7 +8,6 @@ package Interface;
 
 import BandodeDados.*;
 import ru.*;
-import Main.*;
 
 import java.awt.CardLayout;
 import javax.swing.JPanel;
@@ -21,40 +20,42 @@ import javax.swing.JPanel;
 public class Janela extends javax.swing.JFrame {
 
     public CardLayout card;
+    public static Janela instance;
+    
     /** Creates new form Janela */
     public Janela() {
+        preInitComponents();
         initComponents();
+        posInitComponents();
+                
         card = (CardLayout)(panelMaster.getLayout());
-        card.show(panelMaster, "card2");
-        // criar paineis
-//        Interface.Panel1 panel1 = new Interface.Panel1();
-//        Interface.Panel2 panel2 = new Interface.Panel2();
-//        Interface.Panel3 panel3 = new Interface.Panel3();
-//        Interface.Panel4 panel4 = new Interface.Panel4();
-//        Interface.Panel5 panel5 = new Interface.Panel5();
+        card.show(panelMaster, "card1");
+
+    }
+    
+    private void preInitComponents() {
+        panel1 = new Interface.Panel1(this);
+        panel2 = new Interface.Panel2();
+        panel3 = new Interface.Panel3();
+        panel4 = new Interface.Panel4();
+        panel5 = new Interface.Panel5();
+        panel6 = new Interface.Panel6();
+        panel7 = new Interface.Panel7();
+        panel8 = new Interface.Panel8();
+    }
+    
+    private void posInitComponents() {
+        //panelMaster.setLayout(new java.awt.CardLayout());
+        panelMaster.add(panel1, "card1");
+        panelMaster.add(panel2, "card2");
+        panelMaster.add(panel3, "card3");
+        panelMaster.add(panel4, "card4");
+        panelMaster.add(panel5, "card5");
+        panelMaster.add(panel6, "card6");
+        panelMaster.add(panel7, "card7");
+        panelMaster.add(panel8, "card8");
         
-//        getContentPane().getLayout().addLayoutComponent("panel1", panel1);
-//        getContentPane().getLayout().addLayoutComponent("panel2", panel2);
-//        getContentPane().getLayout().addLayoutComponent("panel3", panel3);
-//        getContentPane().getLayout().addLayoutComponent("panel4", panel4);
-//        getContentPane().getLayout().addLayoutComponent("panel5", panel5);
-//        getContentPane().getLayout().addLayoutComponent("panel5", panel5);
-//        pack();
-//        setVisible(true);
-//        getContentPane().getLayout().show(getContentPane(), "panel1");
-        
-        //criar layout
-//        JPanel cards = new JPanel(new CardLayout());
-//        cards.setVisible(true);
-//        cards.getLayout().addLayoutComponent("panel'", panel1);
-////        cards.add(panel2, "panel2");
-////        cards.add(panel3, "panel3");
-////        cards.add(panel4, "panel4");
-////        cards.add(panel5, "panel5");
-//        
-//        //cards.getLayout().show(panel1);
-//        cards.pack();
-//        cards.setVisible(true);
+        pack();
     }
 
     /** This method is called from within the constructor to
@@ -67,14 +68,6 @@ public class Janela extends javax.swing.JFrame {
     private void initComponents() {
 
         panelMaster = new javax.swing.JPanel();
-        panel11 = new Interface.Panel1();
-        panel21 = new Interface.Panel2();
-        panel31 = new Interface.Panel3();
-        panel41 = new Interface.Panel4();
-        panel51 = new Interface.Panel5();
-        panel61 = new Interface.Panel6();
-        panel71 = new Interface.Panel7();
-        panel81 = new Interface.Panel8();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Restaurante Universitario");
@@ -82,14 +75,6 @@ public class Janela extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(700, 500));
 
         panelMaster.setLayout(new java.awt.CardLayout());
-        panelMaster.add(panel11, "card2");
-        panelMaster.add(panel21, "card3");
-        panelMaster.add(panel31, "card4");
-        panelMaster.add(panel41, "card5");
-        panelMaster.add(panel51, "card6");
-        panelMaster.add(panel61, "card7");
-        panelMaster.add(panel71, "card8");
-        panelMaster.add(panel81, "card9");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -108,44 +93,43 @@ public class Janela extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-//    public static void main(String args[]) {
-//        /* Set the Nimbus look and feel */
-//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-//         */
-//        try {
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            //por padrao ele usava tema nimbus
 //            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
 //                if ("Nimbus".equals(info.getName())) {
 //                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
 //                    break;
 //                }
 //            }
-//        } catch (ClassNotFoundException ex) {
-//            java.util.logging.Logger.getLogger(Janela.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (InstantiationException ex) {
-//            java.util.logging.Logger.getLogger(Janela.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (IllegalAccessException ex) {
-//            java.util.logging.Logger.getLogger(Janela.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-//            java.util.logging.Logger.getLogger(Janela.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        }
-//        //</editor-fold>
-//
-//        /* Create and display the form */
-//        java.awt.EventQueue.invokeLater(new Runnable() {
-//            public void run() {
-//                new Janela().setVisible(true);
-//            }
-//        });
-//    }
+            // usar tema do sistema
+            javax.swing.UIManager.setLookAndFeel(javax.swing.UIManager.getSystemLookAndFeelClassName());
+            
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(Janela.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(Janela.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(Janela.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(Janela.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                instance = new Janela();
+                instance.setVisible(true);
+            }
+        });
+    }
     
-//    public void setPanel1Visibility(Boolean visibility) {
-//        panel1.setVisible(visibility); 
-//    }
-//    public void setPanel2Visibility(Boolean visibility) {
-//        panel2.setVisible(visibility); 
-//    }
     
     public void mostrarCarta(String carta) {
         try {
@@ -158,17 +142,22 @@ public class Janela extends javax.swing.JFrame {
     public void testeTexto(String text){
         System.out.println(text);
     }
+    
+    public static Janela getInstance() {
+        return instance;
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private Interface.Panel1 panel11;
-    private Interface.Panel2 panel21;
-    private Interface.Panel3 panel31;
-    private Interface.Panel4 panel41;
-    private Interface.Panel5 panel51;
-    private Interface.Panel6 panel61;
-    private Interface.Panel7 panel71;
-    private Interface.Panel8 panel81;
     private javax.swing.JPanel panelMaster;
     // End of variables declaration//GEN-END:variables
 
+    private Interface.Panel1 panel1;
+    private Interface.Panel2 panel2;
+    private Interface.Panel3 panel3;
+    private Interface.Panel4 panel4;
+    private Interface.Panel5 panel5;
+    private Interface.Panel6 panel6;
+    private Interface.Panel7 panel7;
+    private Interface.Panel8 panel8;
+    
 }

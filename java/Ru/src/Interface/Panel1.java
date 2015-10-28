@@ -5,8 +5,6 @@
  */
 package Interface;
 
-
-import Main.*;
 import BandodeDados.*;
 import ru.*;
 
@@ -18,14 +16,15 @@ import ru.*;
 
 public class Panel1 extends javax.swing.JPanel {
 
-    private Controle controle;
+    public static Janela mainInstance;
     
     /**
      * Creates new form Panel1
      */
-    public Panel1() {
+    public Panel1(Janela instance) {
         initComponents();
-        controle = Ru.getInstance();
+        
+        mainInstance = instance;
     }
 
     /**
@@ -68,7 +67,7 @@ public class Panel1 extends javax.swing.JPanel {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(269, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -77,28 +76,15 @@ public class Panel1 extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        String qualCarta = "card3";
-        //Janela.panel2.setVisible(true);
-        
-        //controle.janela.setPanel1Visibility(false);
-        //controle.janela.setPanel2Visibility(true);
-        //controle.janela.card.show(controle.janela.panelMaster, "card3");
-    try {
-            //controle.janela.mostrarCarta("card3");
-            controle.janela.mostrarCarta(qualCarta);
-        } catch (Exception e) {
-            System.out.println("erro aqui?  " + e.toString());
-        }
-        
+        String qualCarta = "card2";
+        mainInstance.mostrarCarta(qualCarta);
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        
-        //controle.janela.testeTexto("oioi ");
-        controle.testando("oioioi ");
+        mainInstance.mostrarCarta("card3");
+
     }//GEN-LAST:event_jButton2ActionPerformed
 
 

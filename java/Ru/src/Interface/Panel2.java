@@ -57,7 +57,7 @@ public class Panel2 extends javax.swing.JPanel {
                 .addComponent(jButton2)
                 .addGap(33, 33, 33)
                 .addComponent(jButton3)
-                .addContainerGap(34, Short.MAX_VALUE))
+                .addContainerGap(434, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -67,7 +67,7 @@ public class Panel2 extends javax.swing.JPanel {
                     .addComponent(jButton1)
                     .addComponent(jButton2)
                     .addComponent(jButton3))
-                .addContainerGap(150, Short.MAX_VALUE))
+                .addContainerGap(450, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
