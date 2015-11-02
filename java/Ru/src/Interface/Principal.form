@@ -107,7 +107,7 @@
           <Font name="Arial Unicode MS" size="18" style="1"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\Damaris\Desktop\Bot&#xe3;o Cliente.jpg"/>
+          <Image iconType="3" name="/Imagens/Bot&#xe3;o Cliente.jpg"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Cliente"/>
       </Properties>
@@ -123,7 +123,7 @@
     <Component class="javax.swing.JButton" name="jButton3">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\Damaris\Desktop\Bot&#xe3;o Atendente.jpg"/>
+          <Image iconType="3" name="/Imagens/Bot&#xe3;o Atendente.jpg"/>
         </Property>
         <Property name="text" type="java.lang.String" value="jButton3"/>
       </Properties>
@@ -139,7 +139,7 @@
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\Damaris\Desktop\Restaurante Damarildineide.jpg"/>
+          <Image iconType="3" name="/Imagens/Restaurante Damarildineide.jpg"/>
         </Property>
       </Properties>
       <Constraints>

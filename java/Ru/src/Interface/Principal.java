@@ -100,7 +100,7 @@ public class Principal extends javax.swing.JPanel {
         setLayout(null);
 
         jButton2.setFont(new java.awt.Font("Arial Unicode MS", 1, 18)); // NOI18N
-        jButton2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Damaris\\Desktop\\Botão Cliente.jpg")); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Botão Cliente.jpg"))); // NOI18N
         jButton2.setText("Cliente");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -110,7 +110,7 @@ public class Principal extends javax.swing.JPanel {
         add(jButton2);
         jButton2.setBounds(420, 290, 210, 130);
 
-        jButton3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Damaris\\Desktop\\Botão Atendente.jpg")); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Botão Atendente.jpg"))); // NOI18N
         jButton3.setText("jButton3");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -120,7 +120,7 @@ public class Principal extends javax.swing.JPanel {
         add(jButton3);
         jButton3.setBounds(180, 290, 210, 130);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Damaris\\Desktop\\Restaurante Damarildineide.jpg")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Restaurante Damarildineide.jpg"))); // NOI18N
         add(jLabel2);
         jLabel2.setBounds(0, 0, 753, 552);
     }// </editor-fold>//GEN-END:initComponents
