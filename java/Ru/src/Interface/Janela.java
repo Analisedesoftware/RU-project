@@ -34,14 +34,20 @@ public class Janela extends javax.swing.JFrame {
     }
     
     private void preInitComponents() {
-        panel1 = new Interface.Panel1(this);
-        panel2 = new Interface.Panel2();
-        panel3 = new Interface.Panel3();
-        panel4 = new Interface.Panel4();
-        panel5 = new Interface.Panel5();
-        panel6 = new Interface.Panel6();
-        panel7 = new Interface.Panel7();
-        panel8 = new Interface.Panel8();
+        panel1 = new Interface.Principal(this);
+        panel2 = new Interface.TelaAtendente(this);
+        panel3 = new Interface.TelaCliente();
+        panel4 = new Interface.PassarACarteirinha();
+        panel5 = new Interface.CadastroAtendente();
+        panel6 = new Interface.CadastroClientePeloAtendente(this);
+        panel7 = new Interface.InserirCreditosAtendente();
+        panel8 = new Interface.PassarACarteirinhaCreditos();
+        panel9 = new Interface.Compra();
+        panel10 = new Interface.PassarACarteirinhaCompra();
+        panel11 = new Interface.PassarACarteirinhaCadastro();
+        panel12 = new Interface.CadastroClientePeloCliente();
+        panel13 = new Interface.PassarCarteirinhaCreditosCliente();
+        panel14 = new Interface.InserirCreditosCliente();
     }
     
     private void posInitComponents() {
@@ -54,6 +60,12 @@ public class Janela extends javax.swing.JFrame {
         panelMaster.add(panel6, "card6");
         panelMaster.add(panel7, "card7");
         panelMaster.add(panel8, "card8");
+        panelMaster.add(panel9, "card9");
+        panelMaster.add(panel10, "card10");
+        panelMaster.add(panel11, "card11");
+        panelMaster.add(panel12, "card12");
+        panelMaster.add(panel13, "card13");
+        panelMaster.add(panel14, "card14");
         
         pack();
     }
@@ -80,14 +92,17 @@ public class Janela extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelMaster, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panelMaster, javax.swing.GroupLayout.DEFAULT_SIZE, 753, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelMaster, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(panelMaster, javax.swing.GroupLayout.PREFERRED_SIZE, 552, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     /**
@@ -151,13 +166,18 @@ public class Janela extends javax.swing.JFrame {
     private javax.swing.JPanel panelMaster;
     // End of variables declaration//GEN-END:variables
 
-    private Interface.Panel1 panel1;
-    private Interface.Panel2 panel2;
-    private Interface.Panel3 panel3;
-    private Interface.Panel4 panel4;
-    private Interface.Panel5 panel5;
-    private Interface.Panel6 panel6;
-    private Interface.Panel7 panel7;
-    private Interface.Panel8 panel8;
-    
+    private Interface.Principal panel1;
+    private Interface.TelaAtendente panel2;
+    private Interface.TelaCliente panel3;
+    private Interface.PassarACarteirinha panel4;
+    private Interface.CadastroAtendente panel5;
+    private Interface.CadastroClientePeloAtendente panel6;
+    private Interface.InserirCreditosAtendente panel7;
+    private Interface.PassarACarteirinhaCreditos panel8;
+    private Interface.Compra panel9;
+    private Interface.PassarACarteirinhaCompra panel10;
+    private Interface.PassarACarteirinhaCadastro panel11;
+    private Interface.CadastroClientePeloCliente panel12;
+    private Interface.PassarCarteirinhaCreditosCliente panel13;
+    private Interface.InserirCreditosCliente panel14;
 }
