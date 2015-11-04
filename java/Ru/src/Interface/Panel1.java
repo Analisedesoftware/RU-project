@@ -40,6 +40,8 @@ public class Panel1 extends javax.swing.JPanel {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
 
+        setPreferredSize(new java.awt.Dimension(800, 600));
+
         jButton1.setText("Atendente");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

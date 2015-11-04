@@ -45,6 +45,22 @@ public class CadastroClientePeloCliente extends javax.swing.JPanel {
         jButton2 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jPasswordField3 = new javax.swing.JPasswordField();
+        jLabel11 = new javax.swing.JLabel();
+        jPasswordField4 = new javax.swing.JPasswordField();
+        textField4 = new java.awt.TextField();
+        textField5 = new java.awt.TextField();
+        textField6 = new java.awt.TextField();
+        jButton4 = new javax.swing.JButton();
+        jLabel12 = new javax.swing.JLabel();
+        jButton5 = new javax.swing.JButton();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
 
         jDialog1.setLocation(new java.awt.Point(500, 250));
         jDialog1.setSize(new java.awt.Dimension(343, 142));
@@ -83,22 +99,42 @@ public class CadastroClientePeloCliente extends javax.swing.JPanel {
                 .addContainerGap(65, Short.MAX_VALUE))
         );
 
+        setMinimumSize(new java.awt.Dimension(753, 552));
+        setLayout(null);
+
         jLabel5.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Nome:");
+        add(jLabel5);
+        jLabel5.setBounds(214, 154, 41, 19);
 
         jLabel6.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("E-mail:");
+        add(jLabel6);
+        jLabel6.setBounds(214, 207, 43, 19);
 
         jPasswordField1.setText("jPasswordField1");
+        add(jPasswordField1);
+        jPasswordField1.setBounds(362, 253, 188, 20);
 
         jLabel7.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Senha:");
+        add(jLabel7);
+        jLabel7.setBounds(214, 252, 45, 19);
 
         jPasswordField2.setText("jPasswordField1");
+        add(jPasswordField2);
+        jPasswordField2.setBounds(362, 305, 188, 20);
 
         textField2.setText("textField1");
+        add(textField2);
+        textField2.setBounds(362, 153, 188, 20);
 
         textField3.setText("textField1");
+        add(textField3);
+        textField3.setBounds(362, 206, 188, 20);
 
         textField1.setText("101010101");
         textField1.addActionListener(new java.awt.event.ActionListener() {
@@ -106,96 +142,134 @@ public class CadastroClientePeloCliente extends javax.swing.JPanel {
                 textField1ActionPerformed(evt);
             }
         });
+        add(textField1);
+        textField1.setBounds(362, 106, 188, 20);
 
+        jButton1.setFont(new java.awt.Font("TypoUpright BT", 0, 48)); // NOI18N
         jButton1.setText("Cadastrar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
+        add(jButton1);
+        jButton1.setBounds(160, 420, 180, 37);
 
         jLabel2.setFont(new java.awt.Font("Arial Unicode MS", 1, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Cadastro de Clientes");
+        add(jLabel2);
+        jLabel2.setBounds(238, 11, 241, 33);
 
+        jButton2.setFont(new java.awt.Font("TypoUpright BT", 0, 48)); // NOI18N
         jButton2.setText("Cancelar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
+        add(jButton2);
+        jButton2.setBounds(430, 420, 180, 37);
 
         jLabel3.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Código:");
+        add(jLabel3);
+        jLabel3.setBounds(214, 107, 49, 19);
 
         jLabel4.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Confirmar Senha:");
+        add(jLabel4);
+        jLabel4.setBounds(214, 304, 111, 19);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(238, 238, 238)
-                        .addComponent(jLabel2))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(214, 214, 214)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel3)
-                                    .addComponent(jLabel5)
-                                    .addComponent(jLabel6)
-                                    .addComponent(jLabel7)
-                                    .addComponent(jLabel4))
-                                .addGap(37, 37, 37)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(textField3, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)
-                                    .addComponent(textField2, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)
-                                    .addComponent(textField1, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)
-                                    .addComponent(jPasswordField1)
-                                    .addComponent(jPasswordField2))))))
-                .addContainerGap(203, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel2)
-                .addGap(62, 62, 62)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(textField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel3))
-                                .addGap(28, 28, 28)
-                                .addComponent(jLabel5))
-                            .addComponent(textField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(34, 34, 34)
-                        .addComponent(jLabel6))
-                    .addComponent(textField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(31, 31, 31)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jPasswordField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 97, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(93, 93, 93))
-        );
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Fundo Geral.jpg"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        add(jLabel1);
+        jLabel1.setBounds(0, 0, 810, 560);
+
+        jPanel1.setLayout(null);
+
+        jLabel9.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
+        jLabel9.setText("Nome:");
+        jPanel1.add(jLabel9);
+        jLabel9.setBounds(214, 154, 41, 19);
+
+        jLabel10.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
+        jLabel10.setText("E-mail:");
+        jPanel1.add(jLabel10);
+        jLabel10.setBounds(214, 207, 43, 19);
+
+        jPasswordField3.setText("jPasswordField1");
+        jPanel1.add(jPasswordField3);
+        jPasswordField3.setBounds(362, 253, 188, 20);
+
+        jLabel11.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
+        jLabel11.setText("Senha:");
+        jPanel1.add(jLabel11);
+        jLabel11.setBounds(214, 252, 45, 19);
+
+        jPasswordField4.setText("jPasswordField1");
+        jPanel1.add(jPasswordField4);
+        jPasswordField4.setBounds(362, 305, 188, 20);
+
+        textField4.setText("textField1");
+        jPanel1.add(textField4);
+        textField4.setBounds(362, 153, 188, 20);
+
+        textField5.setText("textField1");
+        jPanel1.add(textField5);
+        textField5.setBounds(362, 206, 188, 20);
+
+        textField6.setText("101010101");
+        textField6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textField6ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(textField6);
+        textField6.setBounds(362, 106, 188, 20);
+
+        jButton4.setText("Cadastrar");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton4);
+        jButton4.setBounds(214, 422, 116, 37);
+
+        jLabel12.setFont(new java.awt.Font("Arial Unicode MS", 1, 24)); // NOI18N
+        jLabel12.setText("Cadastro de Clientes");
+        jPanel1.add(jLabel12);
+        jLabel12.setBounds(238, 11, 241, 33);
+
+        jButton5.setText("Cancelar");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton5);
+        jButton5.setBounds(434, 422, 116, 37);
+
+        jLabel13.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
+        jLabel13.setText("Código:");
+        jPanel1.add(jLabel13);
+        jLabel13.setBounds(214, 107, 49, 19);
+
+        jLabel14.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
+        jLabel14.setText("Confirmar Senha:");
+        jPanel1.add(jLabel14);
+        jLabel14.setBounds(214, 304, 111, 19);
+
+        jLabel15.setText("jLabel1");
+        jPanel1.add(jLabel15);
+        jLabel15.setBounds(0, 0, 760, 560);
+
+        add(jPanel1);
+        jPanel1.setBounds(0, 0, 0, 0);
     }// </editor-fold>//GEN-END:initComponents
 
     private void textField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textField1ActionPerformed
@@ -215,12 +289,33 @@ public class CadastroClientePeloCliente extends javax.swing.JPanel {
         mainInstance.mostrarCarta("card3");
     }//GEN-LAST:event_jButton3ActionPerformed
 
+    private void textField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textField6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textField6ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton5ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JDialog jDialog1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -228,10 +323,17 @@ public class CadastroClientePeloCliente extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JPasswordField jPasswordField2;
+    private javax.swing.JPasswordField jPasswordField3;
+    private javax.swing.JPasswordField jPasswordField4;
     private java.awt.TextField textField1;
     private java.awt.TextField textField2;
     private java.awt.TextField textField3;
+    private java.awt.TextField textField4;
+    private java.awt.TextField textField5;
+    private java.awt.TextField textField6;
     // End of variables declaration//GEN-END:variables
 }

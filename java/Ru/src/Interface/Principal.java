@@ -41,6 +41,8 @@ public class Principal extends javax.swing.JPanel {
         jPasswordField1 = new javax.swing.JPasswordField();
         jLabel9 = new javax.swing.JLabel();
         textField2 = new java.awt.TextField();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
@@ -97,6 +99,19 @@ public class Principal extends javax.swing.JPanel {
                 .addContainerGap(50, Short.MAX_VALUE))
         );
 
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
+        jLabel1.setText("jLabel1");
+
         setLayout(null);
 
         jButton2.setFont(new java.awt.Font("Arial Unicode MS", 1, 18)); // NOI18N
@@ -108,21 +123,21 @@ public class Principal extends javax.swing.JPanel {
             }
         });
         add(jButton2);
-        jButton2.setBounds(420, 290, 210, 130);
+        jButton2.setBounds(420, 300, 210, 130);
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Botão Atendente.jpg"))); // NOI18N
-        jButton3.setText("jButton3");
+        jButton3.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 36)); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Atendente.jpg"))); // NOI18N
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
         add(jButton3);
-        jButton3.setBounds(180, 290, 210, 130);
+        jButton3.setBounds(180, 300, 210, 130);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Restaurante Damarildineide.jpg"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Inicial.png"))); // NOI18N
         add(jLabel2);
-        jLabel2.setBounds(0, 0, 753, 552);
+        jLabel2.setBounds(0, 0, 800, 560);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -149,9 +164,11 @@ public class Principal extends javax.swing.JPanel {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JDialog jDialog1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPasswordField jPasswordField1;
     private java.awt.TextField textField2;
     // End of variables declaration//GEN-END:variables
