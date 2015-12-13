@@ -34,6 +34,7 @@ public class CadastroClientePeloAtendente extends javax.swing.JPanel {
         jDialog1 = new javax.swing.JDialog();
         jLabel8 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
+        jLabel9 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         textField2 = new java.awt.TextField();
@@ -50,10 +51,13 @@ public class CadastroClientePeloAtendente extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
 
         jDialog1.setLocation(new java.awt.Point(500, 250));
-        jDialog1.setSize(new java.awt.Dimension(343, 142));
+        jDialog1.setSize(new java.awt.Dimension(360, 180));
+        jDialog1.getContentPane().setLayout(null);
 
         jLabel8.setFont(new java.awt.Font("Arial Unicode MS", 1, 18)); // NOI18N
         jLabel8.setText("Cadastro realizado com sucesso!");
+        jDialog1.getContentPane().add(jLabel8);
+        jLabel8.setBounds(19, 11, 297, 25);
 
         jButton3.setText("OK");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -61,52 +65,34 @@ public class CadastroClientePeloAtendente extends javax.swing.JPanel {
                 jButton3ActionPerformed(evt);
             }
         });
+        jDialog1.getContentPane().add(jButton3);
+        jButton3.setBounds(131, 54, 72, 23);
 
-        javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
-        jDialog1.getContentPane().setLayout(jDialog1Layout);
-        jDialog1Layout.setHorizontalGroup(
-            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDialog1Layout.createSequentialGroup()
-                .addGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jDialog1Layout.createSequentialGroup()
-                        .addGap(131, 131, 131)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jDialog1Layout.createSequentialGroup()
-                        .addGap(19, 19, 19)
-                        .addComponent(jLabel8)))
-                .addContainerGap(27, Short.MAX_VALUE))
-        );
-        jDialog1Layout.setVerticalGroup(
-            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDialog1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel8)
-                .addGap(18, 18, 18)
-                .addComponent(jButton3)
-                .addContainerGap(65, Short.MAX_VALUE))
-        );
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Untitled-2 - Copia.png"))); // NOI18N
+        jDialog1.getContentPane().add(jLabel9);
+        jLabel9.setBounds(0, 0, 340, 140);
 
         setLayout(null);
 
-        jLabel6.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("E-mail:");
         add(jLabel6);
-        jLabel6.setBounds(214, 207, 43, 19);
+        jLabel6.setBounds(200, 200, 60, 22);
 
-        jLabel7.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Senha:");
         add(jLabel7);
-        jLabel7.setBounds(214, 252, 45, 19);
+        jLabel7.setBounds(200, 250, 60, 22);
 
         textField2.setText("textField1");
         add(textField2);
-        textField2.setBounds(362, 153, 188, 20);
+        textField2.setBounds(362, 100, 188, 25);
 
         textField3.setText("textField1");
         add(textField3);
-        textField3.setBounds(362, 206, 188, 20);
+        textField3.setBounds(362, 200, 188, 25);
 
         textField1.setText("101010101");
         textField1.addActionListener(new java.awt.event.ActionListener() {
@@ -115,9 +101,10 @@ public class CadastroClientePeloAtendente extends javax.swing.JPanel {
             }
         });
         add(textField1);
-        textField1.setBounds(362, 106, 188, 20);
+        textField1.setBounds(362, 150, 188, 25);
 
-        jButton1.setFont(new java.awt.Font("TypoUpright BT", 0, 48)); // NOI18N
+        jButton1.setBackground(new java.awt.Color(0, 0, 0));
+        jButton1.setFont(new java.awt.Font("Monotype Corsiva", 0, 36)); // NOI18N
         jButton1.setText("Cadastrar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -125,7 +112,7 @@ public class CadastroClientePeloAtendente extends javax.swing.JPanel {
             }
         });
         add(jButton1);
-        jButton1.setBounds(214, 422, 170, 37);
+        jButton1.setBounds(180, 390, 180, 40);
 
         jLabel2.setFont(new java.awt.Font("Arial Unicode MS", 1, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -133,7 +120,8 @@ public class CadastroClientePeloAtendente extends javax.swing.JPanel {
         add(jLabel2);
         jLabel2.setBounds(238, 11, 241, 33);
 
-        jButton2.setFont(new java.awt.Font("TypoUpright BT", 0, 48)); // NOI18N
+        jButton2.setBackground(new java.awt.Color(0, 0, 0));
+        jButton2.setFont(new java.awt.Font("Monotype Corsiva", 0, 36)); // NOI18N
         jButton2.setText("Cancelar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -141,33 +129,33 @@ public class CadastroClientePeloAtendente extends javax.swing.JPanel {
             }
         });
         add(jButton2);
-        jButton2.setBounds(430, 420, 170, 37);
+        jButton2.setBounds(400, 390, 180, 40);
 
-        jLabel3.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Código:");
         add(jLabel3);
-        jLabel3.setBounds(214, 107, 49, 19);
+        jLabel3.setBounds(200, 150, 70, 22);
 
-        jLabel4.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Confirmar Senha:");
         add(jLabel4);
-        jLabel4.setBounds(214, 304, 111, 19);
+        jLabel4.setBounds(200, 300, 140, 22);
 
-        jLabel5.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Nome:");
         add(jLabel5);
-        jLabel5.setBounds(214, 154, 41, 19);
+        jLabel5.setBounds(200, 100, 60, 22);
 
         jPasswordField1.setText("jPasswordField1");
         add(jPasswordField1);
-        jPasswordField1.setBounds(362, 253, 188, 20);
+        jPasswordField1.setBounds(362, 250, 188, 25);
 
         jPasswordField2.setText("jPasswordField1");
         add(jPasswordField2);
-        jPasswordField2.setBounds(362, 305, 188, 20);
+        jPasswordField2.setBounds(362, 300, 188, 25);
 
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Fundo Geral.jpg"))); // NOI18N
@@ -207,6 +195,7 @@ public class CadastroClientePeloAtendente extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JPasswordField jPasswordField2;
     private java.awt.TextField textField1;

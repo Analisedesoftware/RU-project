@@ -47,7 +47,7 @@ public class PassarACarteirinhaCadastro extends javax.swing.JPanel {
             }
         });
         add(jTextField1);
-        jTextField1.setBounds(500, 430, 146, 30);
+        jTextField1.setBounds(500, 430, 145, 25);
         add(jLabel1);
         jLabel1.setBounds(309, 144, 0, 0);
 
@@ -70,7 +70,7 @@ public class PassarACarteirinhaCadastro extends javax.swing.JPanel {
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Ou digite o codigo da carteirinha:");
         add(jLabel3);
-        jLabel3.setBounds(200, 430, 300, 26);
+        jLabel3.setBounds(200, 430, 300, 25);
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Imagen-animada-Codigo-de-Barras-08.gif"))); // NOI18N
         add(jLabel5);

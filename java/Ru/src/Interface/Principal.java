@@ -41,17 +41,19 @@ public class Principal extends javax.swing.JPanel {
         jPasswordField1 = new javax.swing.JPasswordField();
         jLabel9 = new javax.swing.JLabel();
         textField2 = new java.awt.TextField();
-        jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         jDialog1.setLocation(new java.awt.Point(500, 250));
-        jDialog1.setSize(new java.awt.Dimension(343, 142));
+        jDialog1.setSize(new java.awt.Dimension(360, 180));
+        jDialog1.getContentPane().setLayout(null);
 
         jLabel8.setFont(new java.awt.Font("Arial Unicode MS", 1, 18)); // NOI18N
         jLabel8.setText("Senha:");
+        jDialog1.getContentPane().add(jLabel8);
+        jLabel8.setBounds(40, 66, 63, 25);
 
         jPasswordField1.setText("jPasswordField1");
         jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
@@ -59,9 +61,13 @@ public class Principal extends javax.swing.JPanel {
                 jPasswordField1ActionPerformed(evt);
             }
         });
+        jDialog1.getContentPane().add(jPasswordField1);
+        jPasswordField1.setBounds(143, 72, 156, 20);
 
         jLabel9.setFont(new java.awt.Font("Arial Unicode MS", 1, 18)); // NOI18N
         jLabel9.setText("Login:");
+        jDialog1.getContentPane().add(jLabel9);
+        jLabel9.setBounds(40, 35, 55, 25);
 
         textField2.setText("Atendente1");
         textField2.addActionListener(new java.awt.event.ActionListener() {
@@ -69,71 +75,37 @@ public class Principal extends javax.swing.JPanel {
                 textField2ActionPerformed(evt);
             }
         });
+        jDialog1.getContentPane().add(textField2);
+        textField2.setBounds(143, 35, 156, 20);
 
-        javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
-        jDialog1.getContentPane().setLayout(jDialog1Layout);
-        jDialog1Layout.setHorizontalGroup(
-            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDialog1Layout.createSequentialGroup()
-                .addGap(40, 40, 40)
-                .addGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel8)
-                    .addComponent(jLabel9))
-                .addGap(40, 40, 40)
-                .addGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(textField2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPasswordField1, javax.swing.GroupLayout.DEFAULT_SIZE, 156, Short.MAX_VALUE))
-                .addContainerGap(54, Short.MAX_VALUE))
-        );
-        jDialog1Layout.setVerticalGroup(
-            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDialog1Layout.createSequentialGroup()
-                .addGap(35, 35, 35)
-                .addGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel9)
-                    .addComponent(textField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel8))
-                .addContainerGap(50, Short.MAX_VALUE))
-        );
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-
-        jLabel1.setText("jLabel1");
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Untitled-2 - Copia.png"))); // NOI18N
+        jLabel1.setMaximumSize(new java.awt.Dimension(342, 142));
+        jLabel1.setMinimumSize(new java.awt.Dimension(342, 142));
+        jLabel1.setPreferredSize(new java.awt.Dimension(342, 142));
+        jDialog1.getContentPane().add(jLabel1);
+        jLabel1.setBounds(0, 0, 420, 140);
 
         setLayout(null);
 
         jButton2.setFont(new java.awt.Font("Arial Unicode MS", 1, 18)); // NOI18N
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Botão Cliente.jpg"))); // NOI18N
-        jButton2.setText("Cliente");
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Cliente.png"))); // NOI18N
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
         add(jButton2);
-        jButton2.setBounds(420, 300, 210, 130);
+        jButton2.setBounds(410, 300, 220, 120);
 
         jButton3.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 36)); // NOI18N
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Atendente.jpg"))); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Atendente.png"))); // NOI18N
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
         add(jButton3);
-        jButton3.setBounds(180, 300, 210, 130);
+        jButton3.setBounds(170, 300, 220, 120);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Inicial.png"))); // NOI18N
         add(jLabel2);
@@ -168,7 +140,6 @@ public class Principal extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPasswordField jPasswordField1;
     private java.awt.TextField textField2;
     // End of variables declaration//GEN-END:variables

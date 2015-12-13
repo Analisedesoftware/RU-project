@@ -79,7 +79,10 @@ public class Janela extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jDialog2 = new javax.swing.JDialog();
         panelMaster = new javax.swing.JPanel();
+
+        jDialog2.setSize(new java.awt.Dimension(600, 300));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Restaurante Universitario");
@@ -159,6 +162,7 @@ public class Janela extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JDialog jDialog2;
     private javax.swing.JPanel panelMaster;
     // End of variables declaration//GEN-END:variables
 

@@ -48,7 +48,7 @@ public class PassarACarteirinha extends javax.swing.JPanel {
                 jTextField1ActionPerformed(evt);
             }
         });
-        add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 430, 146, 30));
+        add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 430, 145, 25));
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Voltar.png"))); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {

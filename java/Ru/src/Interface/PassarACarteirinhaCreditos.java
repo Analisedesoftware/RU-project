@@ -32,6 +32,7 @@ public class PassarACarteirinhaCreditos extends javax.swing.JPanel {
         jDialog1 = new javax.swing.JDialog();
         jLabel8 = new javax.swing.JLabel();
         jPasswordField1 = new javax.swing.JPasswordField();
+        jLabel6 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
@@ -41,10 +42,13 @@ public class PassarACarteirinhaCreditos extends javax.swing.JPanel {
         jLabel4 = new javax.swing.JLabel();
 
         jDialog1.setLocation(new java.awt.Point(500, 250));
-        jDialog1.setSize(new java.awt.Dimension(343, 142));
+        jDialog1.setSize(new java.awt.Dimension(360, 180));
+        jDialog1.getContentPane().setLayout(null);
 
         jLabel8.setFont(new java.awt.Font("Arial Unicode MS", 1, 18)); // NOI18N
         jLabel8.setText("Digite sua senha:");
+        jDialog1.getContentPane().add(jLabel8);
+        jLabel8.setBounds(84, 11, 156, 25);
 
         jPasswordField1.setText("jPasswordField1");
         jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
@@ -52,30 +56,12 @@ public class PassarACarteirinhaCreditos extends javax.swing.JPanel {
                 jPasswordField1ActionPerformed(evt);
             }
         });
+        jDialog1.getContentPane().add(jPasswordField1);
+        jPasswordField1.setBounds(106, 54, 111, 20);
 
-        javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
-        jDialog1.getContentPane().setLayout(jDialog1Layout);
-        jDialog1Layout.setHorizontalGroup(
-            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDialog1Layout.createSequentialGroup()
-                .addGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jDialog1Layout.createSequentialGroup()
-                        .addGap(84, 84, 84)
-                        .addComponent(jLabel8))
-                    .addGroup(jDialog1Layout.createSequentialGroup()
-                        .addGap(106, 106, 106)
-                        .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(103, Short.MAX_VALUE))
-        );
-        jDialog1Layout.setVerticalGroup(
-            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDialog1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel8)
-                .addGap(18, 18, 18)
-                .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(68, Short.MAX_VALUE))
-        );
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Untitled-2 - Copia.png"))); // NOI18N
+        jDialog1.getContentPane().add(jLabel6);
+        jLabel6.setBounds(0, 0, 370, 140);
 
         setLayout(null);
 
@@ -83,7 +69,7 @@ public class PassarACarteirinhaCreditos extends javax.swing.JPanel {
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Ou digite o codigo da carteirinha:");
         add(jLabel3);
-        jLabel3.setBounds(200, 430, 300, 26);
+        jLabel3.setBounds(200, 430, 300, 25);
 
         jTextField1.setText("10159842");
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
@@ -92,7 +78,7 @@ public class PassarACarteirinhaCreditos extends javax.swing.JPanel {
             }
         });
         add(jTextField1);
-        jTextField1.setBounds(500, 430, 146, 30);
+        jTextField1.setBounds(500, 430, 145, 25);
         add(jLabel1);
         jLabel1.setBounds(309, 144, 0, 0);
 
@@ -143,6 +129,7 @@ public class PassarACarteirinhaCreditos extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JTextField jTextField1;

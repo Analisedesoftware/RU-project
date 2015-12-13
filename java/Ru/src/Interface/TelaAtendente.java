@@ -40,6 +40,7 @@ public class TelaAtendente extends javax.swing.JPanel {
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
@@ -47,7 +48,8 @@ public class TelaAtendente extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
 
         jDialog1.setLocation(new java.awt.Point(500, 250));
-        jDialog1.setSize(new java.awt.Dimension(343, 132));
+        jDialog1.setSize(new java.awt.Dimension(360, 180));
+        jDialog1.getContentPane().setLayout(null);
 
         jButton5.setText("Sair");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -55,6 +57,8 @@ public class TelaAtendente extends javax.swing.JPanel {
                 jButton5ActionPerformed(evt);
             }
         });
+        jDialog1.getContentPane().add(jButton5);
+        jButton5.setBounds(81, 64, 75, 23);
 
         jButton6.setText("Cancelar");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -62,70 +66,49 @@ public class TelaAtendente extends javax.swing.JPanel {
                 jButton6ActionPerformed(evt);
             }
         });
+        jDialog1.getContentPane().add(jButton6);
+        jButton6.setBounds(188, 64, 75, 23);
 
         jLabel2.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         jLabel2.setText("Você deseja realmente sair?");
+        jDialog1.getContentPane().add(jLabel2);
+        jLabel2.setBounds(56, 20, 249, 26);
 
-        javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
-        jDialog1.getContentPane().setLayout(jDialog1Layout);
-        jDialog1Layout.setHorizontalGroup(
-            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDialog1Layout.createSequentialGroup()
-                .addGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jDialog1Layout.createSequentialGroup()
-                        .addGap(81, 81, 81)
-                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(32, 32, 32)
-                        .addComponent(jButton6))
-                    .addGroup(jDialog1Layout.createSequentialGroup()
-                        .addGap(56, 56, 56)
-                        .addComponent(jLabel2)))
-                .addContainerGap(38, Short.MAX_VALUE))
-        );
-        jDialog1Layout.setVerticalGroup(
-            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialog1Layout.createSequentialGroup()
-                .addContainerGap(20, Short.MAX_VALUE)
-                .addComponent(jLabel2)
-                .addGap(18, 18, 18)
-                .addGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton5)
-                    .addComponent(jButton6))
-                .addGap(45, 45, 45))
-        );
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Untitled-2 - Copia.png"))); // NOI18N
+        jDialog1.getContentPane().add(jLabel3);
+        jLabel3.setBounds(0, 0, 340, 140);
 
         setPreferredSize(new java.awt.Dimension(753, 552));
         setLayout(null);
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Cadastro Cliente.jpg"))); // NOI18N
-        jButton1.setText("Cadatro Cliente");
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Cadastro Cliente.png"))); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
         add(jButton1);
-        jButton1.setBounds(70, 360, 190, 100);
+        jButton1.setBounds(60, 360, 220, 110);
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Cadastro Atendente.jpg"))); // NOI18N
-        jButton2.setText("Cadastro Atendente");
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Cadastro Atendente.png"))); // NOI18N
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
         add(jButton2);
-        jButton2.setBounds(310, 360, 180, 100);
+        jButton2.setBounds(295, 360, 230, 110);
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Inserir Creditos.jpg"))); // NOI18N
-        jButton3.setText("Inserir Crédito");
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Inserir Creditos.png"))); // NOI18N
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
         add(jButton3);
-        jButton3.setBounds(540, 360, 190, 100);
+        jButton3.setBounds(540, 360, 220, 110);
 
         jButton4.setBackground(new java.awt.Color(255, 255, 255));
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/logout.png"))); // NOI18N
@@ -179,5 +162,6 @@ public class TelaAtendente extends javax.swing.JPanel {
     private javax.swing.JDialog jDialog1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     // End of variables declaration//GEN-END:variables
 }

@@ -38,35 +38,32 @@ public class TelaCliente extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(838, 677));
         setLayout(null);
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Cadastro.jpg"))); // NOI18N
-        jButton2.setText("Cadastro");
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Cadastro.png"))); // NOI18N
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
         add(jButton2);
-        jButton2.setBounds(300, 360, 190, 100);
+        jButton2.setBounds(295, 360, 230, 110);
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Compra.jpg"))); // NOI18N
-        jButton1.setText("Compra");
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Compra.png"))); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
         add(jButton1);
-        jButton1.setBounds(80, 360, 180, 100);
+        jButton1.setBounds(60, 360, 220, 110);
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Inserir Creditos.jpg"))); // NOI18N
-        jButton3.setText("Inserir Crédito");
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Inserir Creditos.png"))); // NOI18N
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
         add(jButton3);
-        jButton3.setBounds(540, 360, 190, 100);
+        jButton3.setBounds(540, 360, 220, 110);
 
         jButton4.setBackground(new java.awt.Color(51, 51, 51));
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Voltar.png"))); // NOI18N

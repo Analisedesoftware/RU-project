@@ -32,27 +32,34 @@ public class InserirCreditosCliente extends javax.swing.JPanel {
         jDialog1 = new javax.swing.JDialog();
         jLabel12 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jFormattedTextField1 = new javax.swing.JFormattedTextField();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
+        jFormattedTextField1 = new javax.swing.JFormattedTextField();
+        jRadioButton1 = new javax.swing.JRadioButton();
+        jRadioButton2 = new javax.swing.JRadioButton();
         jLabel13 = new javax.swing.JLabel();
 
         jDialog1.setLocation(new java.awt.Point(500, 250));
-        jDialog1.setSize(new java.awt.Dimension(353, 142));
+        jDialog1.setSize(new java.awt.Dimension(360, 180));
+        jDialog1.getContentPane().setLayout(null);
 
         jLabel12.setFont(new java.awt.Font("Arial Unicode MS", 1, 18)); // NOI18N
         jLabel12.setText("Boleto enviado para o seu e-mail!");
+        jDialog1.getContentPane().add(jLabel12);
+        jLabel12.setBounds(25, 11, 301, 25);
 
         jButton3.setText("OK");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -60,76 +67,18 @@ public class InserirCreditosCliente extends javax.swing.JPanel {
                 jButton3ActionPerformed(evt);
             }
         });
+        jDialog1.getContentPane().add(jButton3);
+        jButton3.setBounds(135, 64, 70, 23);
 
-        javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
-        jDialog1.getContentPane().setLayout(jDialog1Layout);
-        jDialog1Layout.setHorizontalGroup(
-            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDialog1Layout.createSequentialGroup()
-                .addGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jDialog1Layout.createSequentialGroup()
-                        .addGap(25, 25, 25)
-                        .addComponent(jLabel12))
-                    .addGroup(jDialog1Layout.createSequentialGroup()
-                        .addGap(135, 135, 135)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(27, Short.MAX_VALUE))
-        );
-        jDialog1Layout.setVerticalGroup(
-            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDialog1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel12)
-                .addGap(28, 28, 28)
-                .addComponent(jButton3)
-                .addContainerGap(55, Short.MAX_VALUE))
-        );
+        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Untitled-2 - Copia.png"))); // NOI18N
+        jDialog1.getContentPane().add(jLabel14);
+        jLabel14.setBounds(0, 0, 350, 140);
 
         setPreferredSize(new java.awt.Dimension(753, 552));
         setLayout(null);
 
-        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel9.setText("Saldo a ser inserido: R$");
-        add(jLabel9);
-        jLabel9.setBounds(244, 224, 113, 14);
-
-        jLabel2.setFont(new java.awt.Font("Arial Unicode MS", 1, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Inserção de Créditos");
-        add(jLabel2);
-        jLabel2.setBounds(244, 11, 239, 33);
-
-        jFormattedTextField1.setText("10,00");
-        jFormattedTextField1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        add(jFormattedTextField1);
-        jFormattedTextField1.setBounds(375, 221, 52, 20);
-
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Codigo:");
-        add(jLabel3);
-        jLabel3.setBounds(244, 128, 37, 14);
-
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Nome:");
-        add(jLabel1);
-        jLabel1.setBounds(244, 108, 31, 14);
-
-        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel10.setText("Forma de Pagamento: Boleto.");
-        add(jLabel10);
-        jLabel10.setBounds(244, 259, 143, 14);
-
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("10159871");
-        add(jLabel4);
-        jLabel4.setBounds(375, 128, 48, 14);
-
-        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel11.setText("Pedrinho");
-        add(jLabel11);
-        jLabel11.setBounds(375, 108, 42, 14);
-
-        jButton1.setFont(new java.awt.Font("TypoUpright BT", 0, 48)); // NOI18N
+        jButton1.setBackground(new java.awt.Color(0, 0, 0));
+        jButton1.setFont(new java.awt.Font("Monotype Corsiva", 0, 35)); // NOI18N
         jButton1.setText("Confirmar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -137,14 +86,10 @@ public class InserirCreditosCliente extends javax.swing.JPanel {
             }
         });
         add(jButton1);
-        jButton1.setBounds(150, 350, 180, 37);
+        jButton1.setBounds(180, 390, 180, 40);
 
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Email:");
-        add(jLabel5);
-        jLabel5.setBounds(244, 148, 28, 14);
-
-        jButton2.setFont(new java.awt.Font("TypoUpright BT", 0, 48)); // NOI18N
+        jButton2.setBackground(new java.awt.Color(0, 0, 0));
+        jButton2.setFont(new java.awt.Font("Monotype Corsiva", 0, 36)); // NOI18N
         jButton2.setText("Cancelar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -152,22 +97,111 @@ public class InserirCreditosCliente extends javax.swing.JPanel {
             }
         });
         add(jButton2);
-        jButton2.setBounds(420, 350, 180, 37);
+        jButton2.setBounds(400, 390, 180, 40);
 
+        jLabel2.setFont(new java.awt.Font("Arial Unicode MS", 1, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Inserção de Créditos");
+        add(jLabel2);
+        jLabel2.setBounds(244, 11, 239, 33);
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Nome:");
+        add(jLabel1);
+        jLabel1.setBounds(200, 90, 60, 20);
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Codigo:");
+        add(jLabel3);
+        jLabel3.setBounds(200, 120, 61, 20);
+
+        jLabel11.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setText("Pedrinho");
+        add(jLabel11);
+        jLabel11.setBounds(400, 90, 100, 22);
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("10159871");
+        add(jLabel4);
+        jLabel4.setBounds(400, 120, 80, 22);
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("Email:");
+        add(jLabel5);
+        jLabel5.setBounds(200, 150, 48, 22);
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("pedro@alunos.utfpr.edu.br");
         add(jLabel6);
-        jLabel6.setBounds(375, 148, 133, 14);
+        jLabel6.setBounds(400, 150, 210, 22);
 
+        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("Saldo atual: R$");
+        jLabel7.setText("Saldo atual:");
         add(jLabel7);
-        jLabel7.setBounds(244, 196, 73, 14);
+        jLabel7.setBounds(200, 220, 93, 22);
 
+        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("Saldo a ser inserido:");
+        add(jLabel9);
+        jLabel9.setBounds(200, 250, 160, 22);
+
+        jLabel10.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setText("Forma de Pagamento:");
+        add(jLabel10);
+        jLabel10.setBounds(200, 280, 180, 22);
+
+        jLabel15.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel15.setText("R$ 12,50");
+        add(jLabel15);
+        jLabel15.setBounds(400, 220, 72, 22);
+
+        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText("12,50");
+        jLabel8.setText("R$");
         add(jLabel8);
-        jLabel8.setBounds(375, 196, 28, 14);
+        jLabel8.setBounds(400, 250, 30, 22);
+
+        jFormattedTextField1.setText("10,00");
+        jFormattedTextField1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jFormattedTextField1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jFormattedTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jFormattedTextField1ActionPerformed(evt);
+            }
+        });
+        add(jFormattedTextField1);
+        jFormattedTextField1.setBounds(430, 250, 70, 25);
+
+        jRadioButton1.setBackground(new java.awt.Color(204, 204, 204));
+        jRadioButton1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jRadioButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jRadioButton1.setText("Pagamento na hora");
+        jRadioButton1.setOpaque(false);
+        add(jRadioButton1);
+        jRadioButton1.setBounds(195, 310, 180, 30);
+
+        jRadioButton2.setBackground(null);
+        jRadioButton2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jRadioButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jRadioButton2.setText("Boleto");
+        jRadioButton2.setOpaque(false);
+        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton2ActionPerformed(evt);
+            }
+        });
+        add(jRadioButton2);
+        jRadioButton2.setBounds(395, 310, 120, 30);
 
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Fundo Geral.jpg"))); // NOI18N
         add(jLabel13);
@@ -187,6 +221,14 @@ public class InserirCreditosCliente extends javax.swing.JPanel {
         mainInstance.mostrarCarta("card3");
     }//GEN-LAST:event_jButton3ActionPerformed
 
+    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton2ActionPerformed
+
+    private void jFormattedTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFormattedTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jFormattedTextField1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
@@ -199,6 +241,8 @@ public class InserirCreditosCliente extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -207,5 +251,7 @@ public class InserirCreditosCliente extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JRadioButton jRadioButton2;
     // End of variables declaration//GEN-END:variables
 }

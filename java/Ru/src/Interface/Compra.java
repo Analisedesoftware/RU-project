@@ -32,6 +32,7 @@ public class Compra extends javax.swing.JPanel {
         jDialog1 = new javax.swing.JDialog();
         jLabel13 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
+        jLabel14 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -49,9 +50,12 @@ public class Compra extends javax.swing.JPanel {
 
         jDialog1.setLocation(new java.awt.Point(500, 250));
         jDialog1.setSize(new java.awt.Dimension(370, 142));
+        jDialog1.getContentPane().setLayout(null);
 
         jLabel13.setFont(new java.awt.Font("Arial Unicode MS", 1, 17)); // NOI18N
         jLabel13.setText("Compra efetuada. Imprimindo comprovante.");
+        jDialog1.getContentPane().add(jLabel13);
+        jLabel13.setBounds(0, 21, 365, 24);
 
         jButton3.setText("OK");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -59,28 +63,12 @@ public class Compra extends javax.swing.JPanel {
                 jButton3ActionPerformed(evt);
             }
         });
+        jDialog1.getContentPane().add(jButton3);
+        jButton3.setBounds(135, 63, 70, 23);
 
-        javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
-        jDialog1.getContentPane().setLayout(jDialog1Layout);
-        jDialog1Layout.setHorizontalGroup(
-            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDialog1Layout.createSequentialGroup()
-                .addGap(135, 135, 135)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialog1Layout.createSequentialGroup()
-                .addComponent(jLabel13)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        jDialog1Layout.setVerticalGroup(
-            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDialog1Layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(jLabel13)
-                .addGap(18, 18, 18)
-                .addComponent(jButton3)
-                .addContainerGap(56, Short.MAX_VALUE))
-        );
+        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Untitled-2 - Copia.png"))); // NOI18N
+        jDialog1.getContentPane().add(jLabel14);
+        jLabel14.setBounds(0, 0, 360, 140);
 
         setPreferredSize(new java.awt.Dimension(753, 552));
         setLayout(null);
@@ -91,57 +79,68 @@ public class Compra extends javax.swing.JPanel {
         add(jLabel2);
         jLabel2.setBounds(242, 11, 203, 33);
 
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Email:");
         add(jLabel4);
-        jLabel4.setBounds(242, 153, 28, 14);
+        jLabel4.setBounds(200, 150, 110, 22);
 
+        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Joao Silva");
         add(jLabel5);
-        jLabel5.setBounds(353, 113, 48, 14);
+        jLabel5.setBounds(362, 100, 130, 22);
 
+        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("10159871");
         add(jLabel6);
-        jLabel6.setBounds(353, 133, 48, 14);
+        jLabel6.setBounds(362, 150, 130, 22);
 
+        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("joao@alunos.utfpr.edu.br");
         add(jLabel7);
-        jLabel7.setBounds(353, 153, 126, 14);
+        jLabel7.setBounds(362, 200, 200, 22);
 
+        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Saldo atual");
         add(jLabel8);
-        jLabel8.setBounds(242, 230, 53, 14);
+        jLabel8.setBounds(200, 250, 130, 22);
 
+        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("21,15");
         add(jLabel9);
-        jLabel9.setBounds(355, 230, 28, 14);
+        jLabel9.setBounds(362, 250, 110, 22);
 
+        jLabel10.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Compra do almoco");
         add(jLabel10);
-        jLabel10.setBounds(242, 262, 88, 14);
+        jLabel10.setBounds(200, 300, 170, 22);
 
+        jLabel11.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Custo R$ 2,50");
         add(jLabel11);
-        jLabel11.setBounds(242, 282, 69, 14);
+        jLabel11.setBounds(200, 350, 150, 22);
 
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Nome:");
         add(jLabel3);
-        jLabel3.setBounds(242, 113, 31, 14);
+        jLabel3.setBounds(200, 100, 110, 22);
 
+        jLabel12.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setText("Codigo:");
         add(jLabel12);
-        jLabel12.setBounds(242, 133, 37, 14);
+        jLabel12.setBounds(200, 200, 110, 22);
 
-        jButton1.setFont(new java.awt.Font("TypoUpright BT", 0, 48)); // NOI18N
+        jButton1.setBackground(new java.awt.Color(0, 0, 0));
+        jButton1.setFont(new java.awt.Font("Monotype Corsiva", 0, 36)); // NOI18N
         jButton1.setText("Confirmar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -149,9 +148,10 @@ public class Compra extends javax.swing.JPanel {
             }
         });
         add(jButton1);
-        jButton1.setBounds(180, 380, 180, 37);
+        jButton1.setBounds(180, 390, 180, 40);
 
-        jButton2.setFont(new java.awt.Font("TypoUpright BT", 0, 48)); // NOI18N
+        jButton2.setBackground(new java.awt.Color(0, 0, 0));
+        jButton2.setFont(new java.awt.Font("Monotype Corsiva", 0, 36)); // NOI18N
         jButton2.setText("Cancelar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -159,7 +159,7 @@ public class Compra extends javax.swing.JPanel {
             }
         });
         add(jButton2);
-        jButton2.setBounds(420, 380, 180, 37);
+        jButton2.setBounds(400, 390, 180, 40);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Fundo Geral.jpg"))); // NOI18N
         add(jLabel1);
@@ -190,6 +190,7 @@ public class Compra extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
