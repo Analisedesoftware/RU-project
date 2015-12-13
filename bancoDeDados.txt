@@ -1,0 +1,47 @@
+banco de dados local
+usiario: root
+senha: 1234
+nome do banco: projetoru
+criar as tabelas no banco usando os comandos abaixo
+
+
+CREATE TABLE `projetoru`.`cliente` (
+  `nome` VARCHAR(60) NOT NULL,
+  `senha` VARCHAR(20) NOT NULL,
+  `email` VARCHAR(100) NOT NULL,
+  `saldo` DOUBLE NULL,
+  `bolsista` INT NOT NULL,
+  `ra` INT NOT NULL,
+  PRIMARY KEY (`ra`));
+
+
+CREATE TABLE `projetoru`.`funcionario` (
+  `nome` VARCHAR(60) NOT NULL,
+  `senha` VARCHAR(20) NOT NULL,
+  `login` INT NOT NULL,
+  PRIMARY KEY (`login`));
+
+
+insert into cliente 
+(nome, senha, email, saldo, bolsista, ra) values
+(
+"Nome Padrao", 123, "exemplo@utfpr.edu", 0, 0, 10159999
+);
+insert into cliente 
+(nome, senha, email, saldo, bolsista, ra) values
+(
+"Aluno Teste", 123, "teste@utfpr.edu", 0, 0, 10109999
+);
+
+insert into funcionario
+(nome, senha, login) values
+(
+"Nome Padrao", 123, 123456
+);
+
+insert into funcionario
+(nome, senha, login) values
+(
+"Funcionario Exemplo", 123, 123455
+);
+
