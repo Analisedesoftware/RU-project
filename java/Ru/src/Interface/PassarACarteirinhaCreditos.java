@@ -9,7 +9,7 @@ import static Interface.Principal.mainInstance;
 
 /**
  *
- * @author Damaris
+ * @author Damaris tomas mateus
  */
 public class PassarACarteirinhaCreditos extends javax.swing.JPanel {
 
@@ -41,8 +41,6 @@ public class PassarACarteirinhaCreditos extends javax.swing.JPanel {
         jLabel5 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
 
-        jDialog1.setLocation(new java.awt.Point(500, 250));
-        jDialog1.setSize(new java.awt.Dimension(360, 180));
         jDialog1.getContentPane().setLayout(null);
 
         jLabel8.setFont(new java.awt.Font("Arial Unicode MS", 1, 18)); // NOI18N
@@ -50,14 +48,14 @@ public class PassarACarteirinhaCreditos extends javax.swing.JPanel {
         jDialog1.getContentPane().add(jLabel8);
         jLabel8.setBounds(84, 11, 156, 25);
 
-        jPasswordField1.setText("jPasswordField1");
+        jPasswordField1.setText("123");
         jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jPasswordField1ActionPerformed(evt);
             }
         });
         jDialog1.getContentPane().add(jPasswordField1);
-        jPasswordField1.setBounds(106, 54, 111, 20);
+        jPasswordField1.setBounds(106, 54, 130, 20);
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Untitled-2 - Copia.png"))); // NOI18N
         jDialog1.getContentPane().add(jLabel6);
@@ -117,7 +115,10 @@ public class PassarACarteirinhaCreditos extends javax.swing.JPanel {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        jDialog1.setVisible(true);
+        mainInstance.carteirinhatmp = Integer.parseInt(jTextField1.getText());
+        System.out.println("carteirinha escolhida: " + mainInstance.carteirinhatmp);
+        //jDialog1.setVisible(true);
+        mainInstance.mostrarCarta("card7");
     }//GEN-LAST:event_jTextField1ActionPerformed
 
 

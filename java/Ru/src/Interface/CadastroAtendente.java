@@ -5,7 +5,9 @@
  */
 package Interface;
 
+import BandodeDados.*;
 import static Interface.Principal.mainInstance;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -38,10 +40,8 @@ public class CadastroAtendente extends javax.swing.JPanel {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        textField2 = new java.awt.TextField();
         textField3 = new java.awt.TextField();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
@@ -52,8 +52,6 @@ public class CadastroAtendente extends javax.swing.JPanel {
         jLabel12 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
 
-        jDialog1.setLocation(new java.awt.Point(500, 250));
-        jDialog1.setSize(new java.awt.Dimension(360, 180));
         jDialog1.getContentPane().setLayout(null);
 
         jLabel8.setFont(new java.awt.Font("Arial Unicode MS", 1, 18)); // NOI18N
@@ -88,7 +86,7 @@ public class CadastroAtendente extends javax.swing.JPanel {
             }
         });
         add(textField1);
-        textField1.setBounds(362, 100, 188, 25);
+        textField1.setBounds(360, 150, 188, 25);
 
         jLabel2.setBackground(new java.awt.Color(0, 0, 0));
         jLabel2.setFont(new java.awt.Font("Arial Unicode MS", 1, 24)); // NOI18N
@@ -100,19 +98,13 @@ public class CadastroAtendente extends javax.swing.JPanel {
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Nome:");
         add(jLabel3);
-        jLabel3.setBounds(200, 100, 60, 20);
+        jLabel3.setBounds(200, 150, 60, 20);
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Confirmar Senha:");
         add(jLabel4);
         jLabel4.setBounds(200, 300, 140, 22);
-
-        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Cargo:");
-        add(jLabel5);
-        jLabel5.setBounds(200, 150, 60, 20);
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
@@ -125,15 +117,6 @@ public class CadastroAtendente extends javax.swing.JPanel {
         jLabel7.setText("Senha:");
         add(jLabel7);
         jLabel7.setBounds(200, 250, 70, 22);
-
-        textField2.setText("Atendente");
-        textField2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textField2ActionPerformed(evt);
-            }
-        });
-        add(textField2);
-        textField2.setBounds(362, 150, 188, 25);
 
         textField3.setText("3514680494");
         add(textField3);
@@ -161,11 +144,11 @@ public class CadastroAtendente extends javax.swing.JPanel {
         add(jButton2);
         jButton2.setBounds(400, 390, 180, 40);
 
-        jPasswordField2.setText("jPasswordField1");
+        jPasswordField2.setText("123");
         add(jPasswordField2);
         jPasswordField2.setBounds(362, 250, 188, 25);
 
-        jPasswordField3.setText("jPasswordField1");
+        jPasswordField3.setText("123");
         add(jPasswordField3);
         jPasswordField3.setBounds(362, 300, 188, 25);
         add(jLabel1);
@@ -193,6 +176,25 @@ public class CadastroAtendente extends javax.swing.JPanel {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+
+        String senha1 = new String(jPasswordField2.getPassword());
+        String senha2 = new String(jPasswordField3.getPassword());
+        if (senha1.equals(senha2)) {
+
+            Funcionario func = new Funcionario();
+            func.setNome(textField1.getText());
+            func.setSenha(senha1);
+            func.setLogin(Integer.parseInt(textField3.getText()));
+
+            mainInstance.em.getTransaction().begin();
+            mainInstance.em.persist(func);
+            mainInstance.em.getTransaction().commit();
+
+            jDialog1.setVisible(true);
+        } else {
+            JOptionPane.showMessageDialog(null, "Senhas Imcompativeis");
+        }
+
         jDialog1.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -204,10 +206,6 @@ public class CadastroAtendente extends javax.swing.JPanel {
     private void textField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_textField1ActionPerformed
-
-    private void textField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textField2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textField2ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -223,7 +221,6 @@ public class CadastroAtendente extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
@@ -231,7 +228,6 @@ public class CadastroAtendente extends javax.swing.JPanel {
     private javax.swing.JPasswordField jPasswordField2;
     private javax.swing.JPasswordField jPasswordField3;
     private java.awt.TextField textField1;
-    private java.awt.TextField textField2;
     private java.awt.TextField textField3;
     // End of variables declaration//GEN-END:variables
 }

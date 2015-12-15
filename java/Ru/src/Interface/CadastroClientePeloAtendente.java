@@ -170,6 +170,11 @@ public class CadastroClientePeloAtendente extends javax.swing.JPanel {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Fundo Geral.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
+        jLabel1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                jLabel1MouseMoved(evt);
+            }
+        });
         add(jLabel1);
         jLabel1.setBounds(0, 0, 910, 560);
     }// </editor-fold>//GEN-END:initComponents
@@ -187,6 +192,7 @@ public class CadastroClientePeloAtendente extends javax.swing.JPanel {
             cliente.setSenha(senha1);
             cliente.setEmail(textField3.getText());
             cliente.setRa(mainInstance.carteirinhatmp);
+            cliente.setSaldo(0.0);
             
             mainInstance.em.getTransaction().begin();
             mainInstance.em.persist(cliente);
@@ -220,6 +226,10 @@ public class CadastroClientePeloAtendente extends javax.swing.JPanel {
         // TODO add your handling code here:
         textField1.setText(Integer.toString(mainInstance.carteirinhatmp));
     }//GEN-LAST:event_textField1MouseMoved
+
+    private void jLabel1MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseMoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel1MouseMoved
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
