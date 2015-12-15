@@ -5,7 +5,9 @@
  */
 package Interface;
 
+import BandodeDados.Cliente;
 import static Interface.Principal.mainInstance;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -33,6 +35,7 @@ public class InserirCreditosCliente extends javax.swing.JPanel {
         jLabel12 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
         jLabel14 = new javax.swing.JLabel();
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
@@ -52,14 +55,12 @@ public class InserirCreditosCliente extends javax.swing.JPanel {
         jRadioButton2 = new javax.swing.JRadioButton();
         jLabel13 = new javax.swing.JLabel();
 
-        jDialog1.setLocation(new java.awt.Point(500, 250));
-        jDialog1.setSize(new java.awt.Dimension(360, 180));
         jDialog1.getContentPane().setLayout(null);
 
         jLabel12.setFont(new java.awt.Font("Arial Unicode MS", 1, 18)); // NOI18N
-        jLabel12.setText("Boleto enviado para o seu e-mail!");
+        jLabel12.setText("Saldo inserido!");
         jDialog1.getContentPane().add(jLabel12);
-        jLabel12.setBounds(25, 11, 301, 25);
+        jLabel12.setBounds(25, 11, 134, 25);
 
         jButton3.setText("OK");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -75,6 +76,11 @@ public class InserirCreditosCliente extends javax.swing.JPanel {
         jLabel14.setBounds(0, 0, 350, 140);
 
         setPreferredSize(new java.awt.Dimension(753, 552));
+        addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                formComponentShown(evt);
+            }
+        });
         setLayout(null);
 
         jButton1.setBackground(new java.awt.Color(0, 0, 0));
@@ -171,7 +177,7 @@ public class InserirCreditosCliente extends javax.swing.JPanel {
         add(jLabel8);
         jLabel8.setBounds(400, 250, 30, 22);
 
-        jFormattedTextField1.setText("10,00");
+        jFormattedTextField1.setText("10.00");
         jFormattedTextField1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jFormattedTextField1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jFormattedTextField1.addActionListener(new java.awt.event.ActionListener() {
@@ -183,6 +189,7 @@ public class InserirCreditosCliente extends javax.swing.JPanel {
         jFormattedTextField1.setBounds(430, 250, 70, 25);
 
         jRadioButton1.setBackground(new java.awt.Color(204, 204, 204));
+        buttonGroup1.add(jRadioButton1);
         jRadioButton1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jRadioButton1.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton1.setText("Pagamento na hora");
@@ -191,6 +198,7 @@ public class InserirCreditosCliente extends javax.swing.JPanel {
         jRadioButton1.setBounds(195, 310, 180, 30);
 
         jRadioButton2.setBackground(null);
+        buttonGroup1.add(jRadioButton2);
         jRadioButton2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jRadioButton2.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton2.setText("Boleto");
@@ -209,7 +217,24 @@ public class InserirCreditosCliente extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        jDialog1.setVisible(true);
+
+        if (jRadioButton1.isSelected() || jRadioButton2.isSelected()) {
+            Cliente cliente = mainInstance.em.find(Cliente.class, Integer.parseInt(jLabel4.getText()));
+            Double saldoAtual = cliente.getSaldo();
+            Double saldoNv = saldoAtual + Double.parseDouble(jFormattedTextField1.getText());
+
+            mainInstance.em.getTransaction().begin();
+            cliente.setSaldo(saldoNv);
+            mainInstance.em.getTransaction().commit();
+        }
+
+        if (jRadioButton1.isSelected()) {
+            jDialog1.setVisible(true);
+        } else if (jRadioButton2.isSelected()) {
+            JOptionPane.showMessageDialog(null, "Imprimindo boleto");
+            jDialog1.setVisible(true);
+        }
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -229,8 +254,19 @@ public class InserirCreditosCliente extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_jFormattedTextField1ActionPerformed
 
+    private void formComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentShown
+
+        Cliente clt = mainInstance.em.find(Cliente.class, mainInstance.carteirinhatmp);
+        jLabel11.setText(clt.getNome());
+        jLabel4.setText(Integer.toString(clt.getRa()));
+        jLabel6.setText(clt.getEmail());
+        jLabel15.setText(Double.toString(clt.getSaldo()));
+
+    }//GEN-LAST:event_formComponentShown
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;

@@ -5,7 +5,9 @@
  */
 package Interface;
 
+import BandodeDados.Cliente;
 import static Interface.Principal.mainInstance;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -41,18 +43,16 @@ public class PassarACarteirinhaCompra extends javax.swing.JPanel {
         jLabel5 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
 
-        jDialog1.setLocation(new java.awt.Point(500, 250));
-        jDialog1.setSize(new java.awt.Dimension(360, 180));
         jDialog1.getContentPane().setLayout(null);
 
-        jPasswordField1.setText("jPasswordField1");
+        jPasswordField1.setText("123");
         jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jPasswordField1ActionPerformed(evt);
             }
         });
         jDialog1.getContentPane().add(jPasswordField1);
-        jPasswordField1.setBounds(106, 54, 111, 20);
+        jPasswordField1.setBounds(106, 54, 130, 20);
 
         jLabel8.setFont(new java.awt.Font("Arial Unicode MS", 1, 18)); // NOI18N
         jLabel8.setText("Digite sua senha:");
@@ -73,7 +73,7 @@ public class PassarACarteirinhaCompra extends javax.swing.JPanel {
         add(jLabel3);
         jLabel3.setBounds(200, 430, 300, 25);
 
-        jTextField1.setText("10159842");
+        jTextField1.setText("10109999");
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
@@ -113,11 +113,21 @@ public class PassarACarteirinhaCompra extends javax.swing.JPanel {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
-        jDialog1.setVisible(false);
-        mainInstance.mostrarCarta("card9");
+
+        Cliente clt = mainInstance.em.find(Cliente.class, mainInstance.carteirinhatmp);
+        String senha1 = clt.getSenha();
+        String senha2 = new String(jPasswordField1.getPassword());
+        if (senha1.equals(senha2)) {
+            jDialog1.setVisible(false);
+            mainInstance.mostrarCarta("card9");
+        }else{
+            JOptionPane.showMessageDialog(null, "Senha incorreta");
+        }
+        
     }//GEN-LAST:event_jPasswordField1ActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        mainInstance.carteirinhatmp = Integer.parseInt(jTextField1.getText());
         jDialog1.setVisible(true);
     }//GEN-LAST:event_jTextField1ActionPerformed
 

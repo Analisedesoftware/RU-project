@@ -131,7 +131,7 @@ public class InserirCreditosAtendente extends javax.swing.JPanel {
         add(jLabel9);
         jLabel9.setBounds(200, 250, 160, 22);
 
-        jFormattedTextField1.setText("10,00");
+        jFormattedTextField1.setText("10.00");
         jFormattedTextField1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jFormattedTextField1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jFormattedTextField1.addActionListener(new java.awt.event.ActionListener() {
@@ -265,7 +265,7 @@ public class InserirCreditosAtendente extends javax.swing.JPanel {
         jLabel4.setText(Integer.toString(clt.getRa()));
         jLabel6.setText(clt.getEmail());
         jLabel15.setText(Double.toString(clt.getSaldo()));
-        jFormattedTextField1.setText(Double.toString(clt.getSaldo()));
+        //jFormattedTextField1.setText(Double.toString(clt.getSaldo()));
 
     }//GEN-LAST:event_formComponentShown
 

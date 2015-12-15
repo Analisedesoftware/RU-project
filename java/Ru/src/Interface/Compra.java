@@ -5,14 +5,13 @@
  */
 package Interface;
 
+import BandodeDados.Cliente;
 import static Interface.Principal.mainInstance;
+import javax.swing.JOptionPane;
 
 /**
  *
- * @author 
- * Tomás
- * Damaris
- * Mateus
+ * @author Tomás Damaris Mateus
  */
 public class Compra extends javax.swing.JPanel {
 
@@ -51,8 +50,6 @@ public class Compra extends javax.swing.JPanel {
         jButton2 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
-        jDialog1.setLocation(new java.awt.Point(500, 250));
-        jDialog1.setSize(new java.awt.Dimension(370, 142));
         jDialog1.getContentPane().setLayout(null);
 
         jLabel13.setFont(new java.awt.Font("Arial Unicode MS", 1, 17)); // NOI18N
@@ -74,6 +71,11 @@ public class Compra extends javax.swing.JPanel {
         jLabel14.setBounds(0, 0, 360, 140);
 
         setPreferredSize(new java.awt.Dimension(753, 552));
+        addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                formComponentShown(evt);
+            }
+        });
         setLayout(null);
 
         jLabel2.setFont(new java.awt.Font("Arial Unicode MS", 1, 24)); // NOI18N
@@ -96,19 +98,19 @@ public class Compra extends javax.swing.JPanel {
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("10159871");
+        jLabel6.setText("joao@alunos.utfpr.edu.br");
         add(jLabel6);
-        jLabel6.setBounds(362, 150, 130, 22);
+        jLabel6.setBounds(362, 150, 330, 22);
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("joao@alunos.utfpr.edu.br");
+        jLabel7.setText("123123");
         add(jLabel7);
         jLabel7.setBounds(362, 200, 200, 22);
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText("Saldo atual");
+        jLabel8.setText("Saldo atual R$");
         add(jLabel8);
         jLabel8.setBounds(200, 250, 130, 22);
 
@@ -126,7 +128,7 @@ public class Compra extends javax.swing.JPanel {
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel11.setText("Custo R$ 2,50");
+        jLabel11.setText("Custo R$ 2.50");
         add(jLabel11);
         jLabel11.setBounds(200, 350, 150, 22);
 
@@ -165,12 +167,31 @@ public class Compra extends javax.swing.JPanel {
         jButton2.setBounds(400, 390, 180, 40);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Fundo Geral.jpg"))); // NOI18N
+        jLabel1.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                jLabel1ComponentShown(evt);
+            }
+        });
         add(jLabel1);
         jLabel1.setBounds(0, 0, 810, 560);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        jDialog1.setVisible(true);
+
+        Cliente clt = mainInstance.em.find(Cliente.class, Integer.parseInt(jLabel7.getText()));
+        Double saldoAtual = clt.getSaldo();
+        if (saldoAtual >= 2.50) {
+            Double saldoNv = saldoAtual - 2.50;
+
+            mainInstance.em.getTransaction().begin();
+            clt.setSaldo(saldoNv);
+            mainInstance.em.getTransaction().commit();
+
+            jDialog1.setVisible(true);
+        } else {
+            JOptionPane.showMessageDialog(null, "Saldo insuficiente");
+        }
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -181,6 +202,20 @@ public class Compra extends javax.swing.JPanel {
         jDialog1.setVisible(false);
         mainInstance.mostrarCarta("card10");
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jLabel1ComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jLabel1ComponentShown
+
+    }//GEN-LAST:event_jLabel1ComponentShown
+
+    private void formComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentShown
+        // TODO add your handling code here:
+        // toda vez que a janela aparece
+        Cliente clt = mainInstance.em.find(Cliente.class, mainInstance.carteirinhatmp);
+        jLabel5.setText(clt.getNome());
+        jLabel6.setText(clt.getEmail());
+        jLabel7.setText(Integer.toString(clt.getRa()));
+        jLabel9.setText(Double.toString(clt.getSaldo()));
+    }//GEN-LAST:event_formComponentShown
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
