@@ -4,6 +4,8 @@ senha: 1234
 nome do banco: projetoru
 criar as tabelas no banco usando os comandos abaixo
 
+create database projetoru;
+use projetoru;
 
 CREATE TABLE `projetoru`.`cliente` (
   `nome` VARCHAR(60) NOT NULL,
