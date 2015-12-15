@@ -6,24 +6,23 @@
 package Interface;
 
 import BandodeDados.*;
+import javax.swing.JOptionPane;
 import ru.*;
-
 
 /**
  *
  * @author Tomás Abril
  */
-
 public class Principal extends javax.swing.JPanel {
 
     public static Janela mainInstance;
-    
+
     /**
      * Creates new form Panel1
      */
     public Principal(Janela instance) {
         initComponents();
-        
+
         mainInstance = instance;
     }
 
@@ -46,8 +45,6 @@ public class Principal extends javax.swing.JPanel {
         jButton3 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
-        jDialog1.setLocation(new java.awt.Point(500, 250));
-        jDialog1.setSize(new java.awt.Dimension(360, 180));
         jDialog1.getContentPane().setLayout(null);
 
         jLabel8.setFont(new java.awt.Font("Arial Unicode MS", 1, 18)); // NOI18N
@@ -55,7 +52,7 @@ public class Principal extends javax.swing.JPanel {
         jDialog1.getContentPane().add(jLabel8);
         jLabel8.setBounds(40, 66, 63, 25);
 
-        jPasswordField1.setText("jPasswordField1");
+        jPasswordField1.setText("123");
         jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jPasswordField1ActionPerformed(evt);
@@ -69,7 +66,7 @@ public class Principal extends javax.swing.JPanel {
         jDialog1.getContentPane().add(jLabel9);
         jLabel9.setBounds(40, 35, 55, 25);
 
-        textField2.setText("Atendente1");
+        textField2.setText("123455");
         textField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 textField2ActionPerformed(evt);
@@ -123,8 +120,22 @@ public class Principal extends javax.swing.JPanel {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
-        jDialog1.setVisible(false);
-        mainInstance.mostrarCarta("card2");
+
+        int login;
+        String senha;
+
+        login = Integer.parseInt(textField2.getText());
+        senha = new String(jPasswordField1.getPassword());
+
+        Funcionario func = mainInstance.em.find(Funcionario.class, login);
+        if (senha.equals(func.getSenha())) {
+            jDialog1.setVisible(false);
+            mainInstance.mostrarCarta("card2");
+        }else{
+            JOptionPane.showMessageDialog(null, "Erro");
+        }
+
+
     }//GEN-LAST:event_jPasswordField1ActionPerformed
 
     private void textField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textField2ActionPerformed

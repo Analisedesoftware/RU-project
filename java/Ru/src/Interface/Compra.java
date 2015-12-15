@@ -9,7 +9,10 @@ import static Interface.Principal.mainInstance;
 
 /**
  *
- * @author Damaris
+ * @author 
+ * Tomás
+ * Damaris
+ * Mateus
  */
 public class Compra extends javax.swing.JPanel {
 

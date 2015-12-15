@@ -10,6 +10,9 @@ import BandodeDados.*;
 import ru.*;
 
 import java.awt.CardLayout;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import javax.swing.JPanel;
 
 /**
@@ -22,8 +25,16 @@ public class Janela extends javax.swing.JFrame {
     public CardLayout card;
     public static Janela instance;
     
+    public static EntityManagerFactory emf;
+    public static EntityManager em;
+    
+    public int carteirinhatmp;
+    
     /** Creates new form Janela */
     public Janela() {
+        emf = Persistence.createEntityManagerFactory("RuPU");
+        em = emf.createEntityManager();
+        
         preInitComponents();
         initComponents();
         posInitComponents();

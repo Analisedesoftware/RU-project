@@ -14,7 +14,7 @@ import BandodeDados.*;
  * @author Tomás Abril
  */
 
-public class Cliente extends Pessoa {
+public class Clientes extends Pessoa {
     private String email;
     private Double saldo;
     private int ra;

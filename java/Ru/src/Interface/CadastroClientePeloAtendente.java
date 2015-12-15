@@ -5,11 +5,13 @@
  */
 package Interface;
 
+import BandodeDados.*;
 import static Interface.Principal.mainInstance;
+import javax.swing.JOptionPane;
 
 /**
  *
- * @author Damaris
+ * @author Damaris Tomás Mateus
  */
 public class CadastroClientePeloAtendente extends javax.swing.JPanel {
 
@@ -50,8 +52,6 @@ public class CadastroClientePeloAtendente extends javax.swing.JPanel {
         jPasswordField2 = new javax.swing.JPasswordField();
         jLabel1 = new javax.swing.JLabel();
 
-        jDialog1.setLocation(new java.awt.Point(500, 250));
-        jDialog1.setSize(new java.awt.Dimension(360, 180));
         jDialog1.getContentPane().setLayout(null);
 
         jLabel8.setFont(new java.awt.Font("Arial Unicode MS", 1, 18)); // NOI18N
@@ -86,15 +86,25 @@ public class CadastroClientePeloAtendente extends javax.swing.JPanel {
         add(jLabel7);
         jLabel7.setBounds(200, 250, 60, 22);
 
-        textField2.setText("textField1");
+        textField2.setText("joaozinho");
         add(textField2);
         textField2.setBounds(362, 100, 188, 25);
 
-        textField3.setText("textField1");
+        textField3.setText("jznho@utf.edu");
         add(textField3);
         textField3.setBounds(362, 200, 188, 25);
 
         textField1.setText("101010101");
+        textField1.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                textField1ComponentShown(evt);
+            }
+        });
+        textField1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                textField1MouseMoved(evt);
+            }
+        });
         textField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 textField1ActionPerformed(evt);
@@ -149,11 +159,11 @@ public class CadastroClientePeloAtendente extends javax.swing.JPanel {
         add(jLabel5);
         jLabel5.setBounds(200, 100, 60, 22);
 
-        jPasswordField1.setText("jPasswordField1");
+        jPasswordField1.setText("123");
         add(jPasswordField1);
         jPasswordField1.setBounds(362, 250, 188, 25);
 
-        jPasswordField2.setText("jPasswordField1");
+        jPasswordField2.setText("123");
         add(jPasswordField2);
         jPasswordField2.setBounds(362, 300, 188, 25);
 
@@ -165,7 +175,27 @@ public class CadastroClientePeloAtendente extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        jDialog1.setVisible(true);
+        
+        //textField1.setText(Integer.toString(mainInstance.carteirinhatmp));
+        
+        String senha1 = new String(jPasswordField1.getPassword());
+        String senha2 = new String(jPasswordField2.getPassword());
+        if (senha1.equals(senha2)) {
+            
+            Cliente cliente = new Cliente();
+            cliente.setNome(textField2.getText());
+            cliente.setSenha(senha1);
+            cliente.setEmail(textField3.getText());
+            cliente.setRa(mainInstance.carteirinhatmp);
+            
+            mainInstance.em.getTransaction().begin();
+            mainInstance.em.persist(cliente);
+            mainInstance.em.getTransaction().commit();
+            
+            jDialog1.setVisible(true);
+        } else {
+            JOptionPane.showMessageDialog(null, "Senhas Imcompativeis");
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -180,6 +210,16 @@ public class CadastroClientePeloAtendente extends javax.swing.JPanel {
     private void textField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_textField1ActionPerformed
+
+    private void textField1ComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_textField1ComponentShown
+        // TODO add your handling code here:
+        //textField1.setText(Integer.toString(mainInstance.carteirinhatmp));
+    }//GEN-LAST:event_textField1ComponentShown
+
+    private void textField1MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_textField1MouseMoved
+        // TODO add your handling code here:
+        textField1.setText(Integer.toString(mainInstance.carteirinhatmp));
+    }//GEN-LAST:event_textField1MouseMoved
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

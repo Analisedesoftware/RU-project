@@ -13,7 +13,6 @@ import ru.*;
  *
  * @author Tomás Abril
  */
-
 public class PassarACarteirinha extends javax.swing.JPanel {
 
     /**
@@ -77,6 +76,8 @@ public class PassarACarteirinha extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        mainInstance.carteirinhatmp = Integer.parseInt(jTextField1.getText());
+        System.out.println("carteirinha escolhida: " + mainInstance.carteirinhatmp);
         mainInstance.mostrarCarta("card6");
     }//GEN-LAST:event_jTextField1ActionPerformed
 

@@ -14,7 +14,7 @@ import BandodeDados.*;
  * @author Tomás Abril
  */
 
-public class Funcionario extends Pessoa {
+public class Funcionarios extends Pessoa {
     
     private String nome;
 
