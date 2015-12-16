@@ -5,7 +5,7 @@
  */
 package Interface;
 
-import BandodeDados.*;
+import BancodeDados.Funcionario;
 import static Interface.Principal.mainInstance;
 import javax.swing.JOptionPane;
 
@@ -36,6 +36,10 @@ public class CadastroAtendente extends javax.swing.JPanel {
         jButton3 = new javax.swing.JButton();
         jLabel13 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
+        jDialog3 = new javax.swing.JDialog();
+        button2 = new java.awt.Button();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
         textField1 = new java.awt.TextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -52,6 +56,8 @@ public class CadastroAtendente extends javax.swing.JPanel {
         jLabel12 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
 
+        jDialog1.setLocation(new java.awt.Point(500, 250));
+        jDialog1.setSize(new java.awt.Dimension(360, 180));
         jDialog1.getContentPane().setLayout(null);
 
         jLabel8.setFont(new java.awt.Font("Arial Unicode MS", 1, 18)); // NOI18N
@@ -76,10 +82,34 @@ public class CadastroAtendente extends javax.swing.JPanel {
         jLabel11.setFont(new java.awt.Font("Arial Unicode MS", 1, 24)); // NOI18N
         jLabel11.setText("Cadastro de Clientes");
 
+        jDialog3.setLocation(new java.awt.Point(500, 250));
+        jDialog3.setSize(new java.awt.Dimension(360, 180));
+        jDialog3.getContentPane().setLayout(null);
+
+        button2.setLabel("OK");
+        button2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button2ActionPerformed(evt);
+            }
+        });
+        jDialog3.getContentPane().add(button2);
+        button2.setBounds(140, 60, 80, 24);
+
+        jLabel14.setFont(new java.awt.Font("Arial Unicode MS", 1, 18)); // NOI18N
+        jLabel14.setText("Os campos * são obrigatórios.");
+        jDialog3.getContentPane().add(jLabel14);
+        jLabel14.setBounds(50, 20, 300, 25);
+
+        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Untitled-2 - Copia.png"))); // NOI18N
+        jLabel15.setMaximumSize(new java.awt.Dimension(342, 142));
+        jLabel15.setMinimumSize(new java.awt.Dimension(342, 142));
+        jLabel15.setPreferredSize(new java.awt.Dimension(342, 142));
+        jDialog3.getContentPane().add(jLabel15);
+        jLabel15.setBounds(0, 0, 420, 140);
+
         setPreferredSize(new java.awt.Dimension(753, 552));
         setLayout(null);
 
-        textField1.setText("Joaquim");
         textField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 textField1ActionPerformed(evt);
@@ -96,29 +126,33 @@ public class CadastroAtendente extends javax.swing.JPanel {
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Nome:");
+        jLabel3.setText("Nome*:");
         add(jLabel3);
-        jLabel3.setBounds(200, 150, 60, 20);
+        jLabel3.setBounds(200, 150, 70, 20);
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Confirmar Senha:");
+        jLabel4.setText("Confirmar Senha*:");
         add(jLabel4);
-        jLabel4.setBounds(200, 300, 140, 22);
+        jLabel4.setBounds(200, 300, 150, 22);
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("Login:");
+        jLabel6.setText("Login*:");
         add(jLabel6);
-        jLabel6.setBounds(200, 200, 50, 22);
+        jLabel6.setBounds(200, 200, 70, 22);
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("Senha:");
+        jLabel7.setText("Senha*:");
         add(jLabel7);
         jLabel7.setBounds(200, 250, 70, 22);
 
-        textField3.setText("3514680494");
+        textField3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textField3ActionPerformed(evt);
+            }
+        });
         add(textField3);
         textField3.setBounds(362, 200, 188, 25);
 
@@ -143,12 +177,8 @@ public class CadastroAtendente extends javax.swing.JPanel {
         });
         add(jButton2);
         jButton2.setBounds(400, 390, 180, 40);
-
-        jPasswordField2.setText("123");
         add(jPasswordField2);
         jPasswordField2.setBounds(362, 250, 188, 25);
-
-        jPasswordField3.setText("123");
         add(jPasswordField3);
         jPasswordField3.setBounds(362, 300, 188, 25);
         add(jLabel1);
@@ -179,6 +209,10 @@ public class CadastroAtendente extends javax.swing.JPanel {
 
         String senha1 = new String(jPasswordField2.getPassword());
         String senha2 = new String(jPasswordField3.getPassword());
+         if(textField1.getText().length() == 0 || textField3.getText().length() == 0 || senha1.length() == 0 || senha2.length() == 0){
+            jDialog3.setVisible(true);
+        }
+        
         if (senha1.equals(senha2)) {
 
             Funcionario func = new Funcionario();
@@ -207,17 +241,30 @@ public class CadastroAtendente extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_textField1ActionPerformed
 
+    private void textField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textField3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textField3ActionPerformed
+
+    private void button2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button2ActionPerformed
+        jDialog3.setVisible(false);
+        mainInstance.mostrarCarta("card5");
+    }//GEN-LAST:event_button2ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private java.awt.Button button2;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JDialog jDialog1;
+    private javax.swing.JDialog jDialog3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

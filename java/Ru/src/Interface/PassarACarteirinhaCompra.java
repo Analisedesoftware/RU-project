@@ -5,7 +5,7 @@
  */
 package Interface;
 
-import BandodeDados.Cliente;
+import BancodeDados.Cliente;
 import static Interface.Principal.mainInstance;
 import javax.swing.JOptionPane;
 
@@ -43,6 +43,8 @@ public class PassarACarteirinhaCompra extends javax.swing.JPanel {
         jLabel5 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
 
+        jDialog1.setLocation(new java.awt.Point(500, 250));
+        jDialog1.setSize(new java.awt.Dimension(360, 180));
         jDialog1.getContentPane().setLayout(null);
 
         jPasswordField1.setText("123");
@@ -121,7 +123,7 @@ public class PassarACarteirinhaCompra extends javax.swing.JPanel {
             jDialog1.setVisible(false);
             mainInstance.mostrarCarta("card9");
         }else{
-            JOptionPane.showMessageDialog(null, "Senha incorreta");
+            JOptionPane.showMessageDialog(null, "Senha inválida.");
         }
         
     }//GEN-LAST:event_jPasswordField1ActionPerformed

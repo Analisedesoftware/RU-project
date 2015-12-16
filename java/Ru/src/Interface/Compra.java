@@ -5,7 +5,7 @@
  */
 package Interface;
 
-import BandodeDados.Cliente;
+import BancodeDados.Cliente;
 import static Interface.Principal.mainInstance;
 import javax.swing.JOptionPane;
 
@@ -50,6 +50,8 @@ public class Compra extends javax.swing.JPanel {
         jButton2 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
+        jDialog1.setLocation(new java.awt.Point(500, 250));
+        jDialog1.setSize(new java.awt.Dimension(360, 180));
         jDialog1.getContentPane().setLayout(null);
 
         jLabel13.setFont(new java.awt.Font("Arial Unicode MS", 1, 17)); // NOI18N

@@ -5,7 +5,7 @@
  */
 package Interface;
 
-import BandodeDados.*;
+import BancodeDados.Funcionario;
 import javax.swing.JOptionPane;
 import ru.*;
 
@@ -41,10 +41,22 @@ public class Principal extends javax.swing.JPanel {
         jLabel9 = new javax.swing.JLabel();
         textField2 = new java.awt.TextField();
         jLabel1 = new javax.swing.JLabel();
+        jDialog3 = new javax.swing.JDialog();
+        button2 = new java.awt.Button();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jDialog4 = new javax.swing.JDialog();
+        button3 = new java.awt.Button();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
+        jDialog1.setLocation(new java.awt.Point(500, 250));
+        jDialog1.setSize(new java.awt.Dimension(360, 180));
         jDialog1.getContentPane().setLayout(null);
 
         jLabel8.setFont(new java.awt.Font("Arial Unicode MS", 1, 18)); // NOI18N
@@ -81,6 +93,66 @@ public class Principal extends javax.swing.JPanel {
         jLabel1.setPreferredSize(new java.awt.Dimension(342, 142));
         jDialog1.getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 420, 140);
+
+        jDialog3.setLocation(new java.awt.Point(500, 250));
+        jDialog3.setSize(new java.awt.Dimension(360, 180));
+        jDialog3.getContentPane().setLayout(null);
+
+        button2.setLabel("OK");
+        button2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button2ActionPerformed(evt);
+            }
+        });
+        jDialog3.getContentPane().add(button2);
+        button2.setBounds(140, 60, 80, 24);
+
+        jLabel13.setFont(new java.awt.Font("Arial Unicode MS", 1, 18)); // NOI18N
+        jLabel13.setText("obrigatórios. ");
+        jDialog3.getContentPane().add(jLabel13);
+        jLabel13.setBounds(130, 30, 140, 25);
+
+        jLabel12.setFont(new java.awt.Font("Arial Unicode MS", 1, 18)); // NOI18N
+        jLabel12.setText("Os campos Login e Senha são ");
+        jDialog3.getContentPane().add(jLabel12);
+        jLabel12.setBounds(30, 10, 300, 25);
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Untitled-2 - Copia.png"))); // NOI18N
+        jLabel4.setMaximumSize(new java.awt.Dimension(342, 142));
+        jLabel4.setMinimumSize(new java.awt.Dimension(342, 142));
+        jLabel4.setPreferredSize(new java.awt.Dimension(342, 142));
+        jDialog3.getContentPane().add(jLabel4);
+        jLabel4.setBounds(0, 0, 420, 140);
+
+        jDialog4.setLocation(new java.awt.Point(500, 250));
+        jDialog4.setSize(new java.awt.Dimension(360, 180));
+        jDialog4.getContentPane().setLayout(null);
+
+        button3.setLabel("OK");
+        button3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button3ActionPerformed(evt);
+            }
+        });
+        jDialog4.getContentPane().add(button3);
+        button3.setBounds(140, 60, 80, 24);
+
+        jLabel14.setFont(new java.awt.Font("Arial Unicode MS", 1, 18)); // NOI18N
+        jLabel14.setText("novamente. ");
+        jDialog4.getContentPane().add(jLabel14);
+        jLabel14.setBounds(130, 30, 140, 25);
+
+        jLabel15.setFont(new java.awt.Font("Arial Unicode MS", 1, 18)); // NOI18N
+        jLabel15.setText("Atendente inválido! Tente");
+        jDialog4.getContentPane().add(jLabel15);
+        jLabel15.setBounds(70, 10, 300, 25);
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Untitled-2 - Copia.png"))); // NOI18N
+        jLabel5.setMaximumSize(new java.awt.Dimension(342, 142));
+        jLabel5.setMinimumSize(new java.awt.Dimension(342, 142));
+        jLabel5.setPreferredSize(new java.awt.Dimension(342, 142));
+        jDialog4.getContentPane().add(jLabel5);
+        jLabel5.setBounds(0, 0, 420, 140);
 
         setLayout(null);
 
@@ -121,18 +193,31 @@ public class Principal extends javax.swing.JPanel {
 
     private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
 
-        int login;
-        String senha;
+        int login=0;
+        String senha=null;
+        
+        try {
+            login = Integer.parseInt(textField2.getText());
+            senha = new String(jPasswordField1.getPassword());
+        } catch (Exception e) {
+            jDialog1.setVisible(false);
+            jDialog3.setVisible(true);
+        }
+        
 
-        login = Integer.parseInt(textField2.getText());
-        senha = new String(jPasswordField1.getPassword());
+        if (senha.length() == 0) {
+            jDialog1.setVisible(false);
+            jDialog3.setVisible(true);
+            return;
+        }
 
         Funcionario func = mainInstance.em.find(Funcionario.class, login);
         if (senha.equals(func.getSenha())) {
             jDialog1.setVisible(false);
             mainInstance.mostrarCarta("card2");
-        }else{
-            JOptionPane.showMessageDialog(null, "Erro");
+        } else {
+            jDialog1.setVisible(false);
+            jDialog4.setVisible(true);
         }
 
 
@@ -142,13 +227,34 @@ public class Principal extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_textField2ActionPerformed
 
+    private void button2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button2ActionPerformed
+        jDialog3.setVisible(false);
+        jDialog1.setVisible(true);
+    }//GEN-LAST:event_button2ActionPerformed
+
+    private void button3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button3ActionPerformed
+        // TODO add your handling code here:
+        jDialog4.setVisible(false);
+        jDialog1.setVisible(true);
+    }//GEN-LAST:event_button3ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private java.awt.Button button2;
+    private java.awt.Button button3;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JDialog jDialog1;
+    private javax.swing.JDialog jDialog3;
+    private javax.swing.JDialog jDialog4;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPasswordField jPasswordField1;

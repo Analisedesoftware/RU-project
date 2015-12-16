@@ -5,7 +5,7 @@
  */
 package Interface;
 
-import BandodeDados.Cliente;
+import BancodeDados.Cliente;
 import static Interface.Principal.mainInstance;
 import javax.swing.JOptionPane;
 
@@ -35,6 +35,10 @@ public class CadastroClientePeloCliente extends javax.swing.JPanel {
         jLabel8 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
         jLabel16 = new javax.swing.JLabel();
+        jDialog3 = new javax.swing.JDialog();
+        button2 = new java.awt.Button();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jPasswordField1 = new javax.swing.JPasswordField();
@@ -65,6 +69,8 @@ public class CadastroClientePeloCliente extends javax.swing.JPanel {
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
 
+        jDialog1.setLocation(new java.awt.Point(500, 250));
+        jDialog1.setSize(new java.awt.Dimension(360, 180));
         jDialog1.getContentPane().setLayout(null);
 
         jLabel8.setFont(new java.awt.Font("Arial Unicode MS", 1, 18)); // NOI18N
@@ -85,6 +91,31 @@ public class CadastroClientePeloCliente extends javax.swing.JPanel {
         jDialog1.getContentPane().add(jLabel16);
         jLabel16.setBounds(0, 0, 350, 140);
 
+        jDialog3.setLocation(new java.awt.Point(500, 250));
+        jDialog3.setSize(new java.awt.Dimension(360, 180));
+        jDialog3.getContentPane().setLayout(null);
+
+        button2.setLabel("OK");
+        button2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button2ActionPerformed(evt);
+            }
+        });
+        jDialog3.getContentPane().add(button2);
+        button2.setBounds(140, 60, 80, 24);
+
+        jLabel17.setFont(new java.awt.Font("Arial Unicode MS", 1, 18)); // NOI18N
+        jLabel17.setText("Os campos * são obrigatórios.");
+        jDialog3.getContentPane().add(jLabel17);
+        jLabel17.setBounds(50, 20, 300, 25);
+
+        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Untitled-2 - Copia.png"))); // NOI18N
+        jLabel18.setMaximumSize(new java.awt.Dimension(342, 142));
+        jLabel18.setMinimumSize(new java.awt.Dimension(342, 142));
+        jLabel18.setPreferredSize(new java.awt.Dimension(342, 142));
+        jDialog3.getContentPane().add(jLabel18);
+        jLabel18.setBounds(0, 0, 420, 140);
+
         setMinimumSize(new java.awt.Dimension(753, 552));
         addComponentListener(new java.awt.event.ComponentAdapter() {
             public void componentShown(java.awt.event.ComponentEvent evt) {
@@ -95,38 +126,31 @@ public class CadastroClientePeloCliente extends javax.swing.JPanel {
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Nome:");
+        jLabel5.setText("Nome*:");
         add(jLabel5);
         jLabel5.setBounds(200, 100, 70, 22);
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("E-mail:");
+        jLabel6.setText("E-mail*:");
         add(jLabel6);
         jLabel6.setBounds(200, 200, 80, 22);
-
-        jPasswordField1.setText("123");
         add(jPasswordField1);
         jPasswordField1.setBounds(362, 250, 188, 25);
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("Senha:");
+        jLabel7.setText("Senha*:");
         add(jLabel7);
         jLabel7.setBounds(200, 250, 80, 22);
-
-        jPasswordField2.setText("123");
         add(jPasswordField2);
         jPasswordField2.setBounds(362, 300, 188, 25);
-
-        textField2.setText("pedro");
         add(textField2);
         textField2.setBounds(362, 100, 188, 25);
-
-        textField3.setText("pedro@alunos.edu");
         add(textField3);
         textField3.setBounds(362, 200, 188, 25);
 
+        textField1.setEditable(false);
         textField1.setText("321321");
         textField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -172,9 +196,9 @@ public class CadastroClientePeloCliente extends javax.swing.JPanel {
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Confirmar Senha:");
+        jLabel4.setText("Confirmar Senha*:");
         add(jLabel4);
-        jLabel4.setBounds(200, 300, 140, 22);
+        jLabel4.setBounds(200, 300, 150, 22);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -274,6 +298,12 @@ public class CadastroClientePeloCliente extends javax.swing.JPanel {
 
         String senha1 = new String(jPasswordField1.getPassword());
         String senha2 = new String(jPasswordField2.getPassword());
+        
+        if(textField2.getText().length() == 0 || textField3.getText().length() == 0 || senha1.length() == 0 || senha2.length() == 0){
+            jDialog3.setVisible(true);
+            return;
+        }
+        
         if (senha1.equals(senha2)) {
 
             Cliente cliente = new Cliente();
@@ -320,14 +350,21 @@ public class CadastroClientePeloCliente extends javax.swing.JPanel {
         textField1.setText(Integer.toString(mainInstance.carteirinhatmp));
     }//GEN-LAST:event_formComponentShown
 
+    private void button2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button2ActionPerformed
+        jDialog3.setVisible(false);
+        mainInstance.mostrarCarta("card12");
+    }//GEN-LAST:event_button2ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private java.awt.Button button2;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JDialog jDialog1;
+    private javax.swing.JDialog jDialog3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -336,6 +373,8 @@ public class CadastroClientePeloCliente extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

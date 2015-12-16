@@ -6,7 +6,6 @@
 package ru;
 
 import Interface.*;
-import BandodeDados.*;
 
 
 /**
@@ -44,6 +43,10 @@ public class Pessoa {
      */
     public void setSenha(String senha) {
         this.senha = senha;
+    }
+    int colocarCredito(Double valor){
+        int credito = 0;
+        return credito;
     }
 
 }

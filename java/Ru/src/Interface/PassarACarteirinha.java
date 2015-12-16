@@ -5,7 +5,6 @@
  */
 package Interface;
 
-import BandodeDados.*;
 import static Interface.Principal.mainInstance;
 import ru.*;
 

@@ -6,7 +6,6 @@
 
 package Interface;
 
-import BandodeDados.*;
 import ru.*;
 
 import java.awt.CardLayout;

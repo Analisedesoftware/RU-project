@@ -41,6 +41,8 @@ public class PassarACarteirinhaCreditos extends javax.swing.JPanel {
         jLabel5 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
 
+        jDialog1.setLocation(new java.awt.Point(500, 250));
+        jDialog1.setSize(new java.awt.Dimension(360, 180));
         jDialog1.getContentPane().setLayout(null);
 
         jLabel8.setFont(new java.awt.Font("Arial Unicode MS", 1, 18)); // NOI18N

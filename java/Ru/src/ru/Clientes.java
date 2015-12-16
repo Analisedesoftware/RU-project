@@ -6,15 +6,13 @@
 package ru;
 
 import Interface.*;
-import BandodeDados.*;
-
 
 /**
  *
  * @author Tomás Abril
  */
-
 public class Clientes extends Pessoa {
+
     private String email;
     private Double saldo;
     private int ra;
@@ -76,5 +74,15 @@ public class Clientes extends Pessoa {
         this.bolsista = bolsista;
     }
 
+    int compra(Double valor) {
+        return 0;
+    }
 
+    int cadastroCliente(String nome, String senha, String email, Integer ra) {
+        return 0;
+    }
+
+    int cadastroCliente(String nome, String senha, Integer login) {
+        return 0;
+    }
 }
